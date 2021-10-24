@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ settings.language }}" {% if settings.language == "he-IL" %} dir="rtl" {% endif %}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ settings.title }}</title>
+  <meta name="description" content="{{ settings.description }}">
+
+<!-- Fonts -->
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fredericka-the-great-subset.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="/assets/patua-one.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="/assets/catamaran.woff2" crossorigin />
+
+  <link rel="canonical" href="{{ settings.url }}" />
+  <meta name="twitter:card" content="summary">
+  <meta property="og:type" content="website">
+  <meta name="twitter:creator" content="{{ settings.author }}">
+  <meta property="og:url" content="{{ settings.url }}">
+  <meta name="twitter:title" property="og:title" content="{{ settings.title }}">
+  <meta property="og:description" content="{{ settings.description }}">
+  <meta name="twitter:image" property="og:image" content="{{ settings.url }}{{ settings.socialImage }}">
+  <meta name="twitter:image:alt" content="{{ settings.title }}">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="420">
+  <link rel="icon" type="image/svg+xml" href="{{ settings.url }}/assets/favicon.svg">
+
+<!-- CSS -->
+  {% set css %}
+  {% include "utilities/style.css" %}
+  {% endset %}
+  <style>{{ css | safe }}</style>
+
+</head>
+<body>
+  {% include "header.njk" %}
+    <div class="wrapper">
+      <main>
+        {{ content | safe }}
+      </main>
+  {% include "footer.njk" %}
+    </div>
+  {% include "utilities/schema.njk" %}
+
+  {% set js %}
+  {% include "utilities/liteYoutube.js" %}
+  {% endset %}
+  <script>{{ js | safe }}</script>
+</body>
+</html>

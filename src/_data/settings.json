@@ -1,0 +1,30 @@
+{
+	"language": "en-US",
+	"title": "Cutting Edge Bangs",
+	"description": "A boutique hair salon in London. Specializing in bangs that go BANG!",
+	"author": "Curly Simon",
+	"url": "https://mighty.vercel.app",
+	"socialImage": "/assets/social-image.jpg",
+	"contact": {
+		"twitter": "https://twitter.com/eleven_ty",
+		"phoneCall": "+12(0)34567890",
+		"phoneNumber": "+12 (0)34 567890",
+		"email": "curly@cuttingedge.com",
+		"address": {
+			"street": "Main Str.",
+			"streetNumber": "42",
+			"postcode": "90210",
+			"city": "London"
+		}
+	},
+	"navigation": [
+		{
+			"label": "services",
+			"url": "../#Services"
+		},
+		{
+			"label": "portfolio",
+			"url": "../#Portfolio"
+		}
+	]
+}

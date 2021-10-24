@@ -1,0 +1,9 @@
+<header>
+  <h1><a href="/">{{ settings.title | upper }}</a></h1>
+  <nav aria-label="Primary">
+  {% for item in settings.navigation %}
+    <a href="{{ item.url }}">{{ item.label | capitalize }}</a>
+  {% endfor %}
+  </nav>
+  <img src="/assets/hero-image.webp" alt="{{ settings.title }}, {{ settings.description }}">
+</header>

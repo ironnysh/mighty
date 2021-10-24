@@ -1,0 +1,22 @@
+    <aside class="contact">
+      <h2 id="Contact_me">Let's Talk</h2>
+        {% if settings.title and settings.contact.address | length %}
+          <address>
+          {{ settings.title }}<br>
+          {{ settings.contact.address.street }}, {{ settings.contact.address.streetNumber }}<br>
+          {{ settings.contact.address.postcode }}
+          {{ settings.contact.address.city }}
+          </address>
+        {% endif %}
+    <nav aria-label="Secondary">
+      {% if settings.contact.email %}
+        <a href="mailto:{{ settings.contact.email }}?subject=Contact from the site" aria-label="Shoot me an email">{% include "svg/email.svg" %}</a>
+      {% endif %}
+      {% if settings.contact.phoneCall and settings.contact.phoneNumber %}
+        <a href="tel:{{ settings.contact.phoneCall }}" aria-label="Give me a call">{% include "svg/phone.svg" %}</a>
+      {% endif %}
+      {% if settings.contact.twitter %}
+        <a href="{{ settings.contact.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Follow on Twitter">{% include "svg/twitter.svg" %}</a>
+      {% endif %}
+    </nav>
+    </aside>

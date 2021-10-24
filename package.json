@@ -1,0 +1,25 @@
+{
+	"name": "mighty",
+	"version": "1.0",
+	"description": "Mighty - a simple Eleventy starter",
+	"licence": "CC-BY-NC-ND-4.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ironnysh/mighty.git"
+	},
+	"scripts": {
+		"start": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
+		"build": "ELEVENTY_ENV=production npx @11ty/eleventy"
+	},
+	"keywords": [
+		"Mighty",
+		"Eleventy starter",
+		"11ty",
+    "one-pager"
+	],
+	"author": "Ronny Shani",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.12.0",
+		"html-minifier": "^4.0.0"
+	}
+}
