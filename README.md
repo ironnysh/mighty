@@ -1,8 +1,11 @@
 # Mighty Eleventy Starter
 
+![screenshot: a demo of Mighty used for a fictional hair salon](mighty.webp)
 ## Summary
 
 Mighty is my attempt at using [Eleventy (11ty)](https://www.11ty.dev) to build a sort of Single Page Application (SPA) - a simple, elegant theme from which freelancers or small businesses can generate simple one-pagers.
+
+[See a demo of the site.](https://mighty-site.vercel.app)
 
 ## Features
 
@@ -50,7 +53,7 @@ npm start
 Open your browser and type `http://localhost:8080` in the address bar to see your site.
 
 #### Remote
-When you're ready to deploy your site to a hosting provider, copy and paste the following command in your preferred hosting platform's settings section. It will generate a remote copy of the site under the `www` directory.
+When you're ready to deploy your site to a hosting provider, copy and paste the following command in your preferred hosting platform's settings section. It will generate a remote copy of the site in the `www` directory (*note: this also needs to be specified on Vercel See the screenshot below).
 ```
 npm run build
 ```
@@ -59,6 +62,9 @@ npm run build
 Click this button to host your site on Vercel:
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ironnysh/mighty.git)
+
+This is what you should use when clicking the button:
+![screenshot: deploy the site to Vercel](vercel_delpoy.webp)
 
 ## Customize and adapt the content and design
 
