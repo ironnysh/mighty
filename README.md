@@ -36,6 +36,8 @@ To adapt the theme to your needs, please see the various sections of this guide.
 
 ## Getting started
 
+* If this is your first time working with Eleventy, SSGs, or Node, it might be a good idea to start with [https://www.tatianamac.com/posts/beginner-eleventy-tutorial-parti/](Tatiana Mac's comprehensive tutorial). The multi-part series is titled __Beginner's Guide to Eleventy__, but it's packed with incredibly useful information about all things web-dev. Highly recommended read.
+
 ### 1. Clone this repository and install the project dependencies
 Copy the following command and paste it into your device's terminal to run a local copy of the site. Feel free to change `your-project-name` to your site's name.
 
