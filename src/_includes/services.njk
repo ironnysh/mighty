@@ -3,7 +3,7 @@
     <ul class="columns">
       {%- for services in content.services %}
         <li>
-        <h3>{{ services.title }}</h3>
+        <h3>{{ services.title | upper }}</h3>
         <p>{{ services.summary }}</p>
         </li>
       {% endfor %}
