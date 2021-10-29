@@ -157,14 +157,17 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 │           └── email.svg
 │           └── phone.svg
 │           └── twitter.svg
+│       └── utilities
+│           └── schema.njk
+│           └── style.css
+│           └── liteYoutube.js
 │       └── about.njk
 │       └── contact.njk
 │       └── footer.njk
 │       └── header.njk
 │       └── portfolio.njk
-│       └── schema.njk
 │       └── services.njk
-│       └── style.css
+│       └── 
 │   └── assets
 │       └── catamaran.woff2
 │       └── favicon.svg
@@ -172,9 +175,9 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 │       └── patua-one.woff2
 │       └── social-image.jpg
 │       └── hero-image.webp
-│       └── liteYoutube.js
 │   └── imprint.md
 │   └── index.njk
+│   └── robots.njk
 ├── .github
 │   └── workflows
 │       └── calibreapp-image-actions.yml
@@ -184,6 +187,8 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 ├── LICENSE
 ├── README.md
 ├── Subset-google_fonts.webp
+├── mighty.webp
+├── vercel_delpoy.webp
 └── package.json
 └── vercel.json
 
@@ -191,21 +196,26 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 
 ## File overview
 
-`.github`:
-- `dependabot.yml` - GitHub's automatic updates of dependencies.
-- `workflows`:
-- `calibreapp-image-actions.yml` - Calibreapp's GitHub Action to compress and optimize images. Only runs on pull-requests and when a jpg/webp file changes. [See information and optional configuration](https://github.com/marketplace/actions/image-actions).
-
+`root`:
 - `.eleventy.js` - general 11ty configuration.
 - `.gitignore` - files that you do not want to upload to GitHub.
 - `README.md` - the document you're currently reading.
 - `LICENSE` - the open-source license.
 - `Subset-google_fonts.webp` - a screenshot of a CSS code for a subsetted font from Google Fonts.
+- `vercel_delpoy.webp` -  a screenshot of Vercel's deployment settings window.
+- `mighty.webp` -  a screenshot of the demo site. 
 - `package.json` - general information about the repository, scripts, and dependencies.
+
+`.github`:
+- `dependabot.yml` - GitHub's automatic updates of dependencies.
+
+`.github/workflows`:
+- `calibreapp-image-actions.yml` - Calibreapp's GitHub Action to compress and optimize images. Only runs on pull-requests and when a jpg/webp file changes. [See information and optional configuration](https://github.com/marketplace/actions/image-actions).
 
 `src`:
 - `imprint.md` - text for the Imprint & privacy policy page.
 - `index.njk` - 11ty template for generating the homepage: loads About, Services, and Portfolio.
+- `robots.njk` - 11ty template for generating a generic `robots.txt` file for search engines, web crawlers, and bots.
 
 `src/_data`:
 - `content.json` - all of the content on the homepage: text for the About, Services, Portfolio, and privacy policy references.
@@ -215,16 +225,19 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 `src/_includes`:
 - `layouts` > `default.njk` - default site layout, responsible for loading styles and script.
 - `svg` > `email.svg`, `phone.svg`, `twitter.svg` - the SVG icons displayed in the Contact section.
+
 - `about.njk` - the layout for the About section (right below the hero image).
 - `contact.njk` - the layout for the contact section (_Let's Talk_ circle).
 - `footer.njk` - the layout for the footer - copyright, date, and link to imprint.
 - `header.njk` - title, navigation, and hero image.
 - `portfolio.njk` - the layout for the Portfolio section (_What I've Been up to_).
-- `schema.njk` - script for SEO and search engines.
 - `services.njk` - the layout for the Services section (_Let's Work Together_).
-- `style.css` - site CSS styles.
-- `liteYoutube.js` - script that loads the YouTube videos (iframe embeds) only when the person clicks on the photo.
 
+`src/_includes/utilities`:
+- `schema.njk` - script for SEO and search engines.
+- `style.css` - site CSS styles.
+- `liteYoutube.js` - script that loads the YouTube video (iframe embeds) only when the user clicks the placeholder photo.
+ 
 `src/assets`:
 - `favicon.svg` - site favicon.
 - `social-image.jpg` - graphic file for social media shares.
