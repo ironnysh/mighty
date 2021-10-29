@@ -9,18 +9,18 @@ Mighty is my attempt at using [Eleventy (11ty)](https://www.11ty.dev) to build a
 
 ## Features
 
-- Responsive layout (no media query).
-- Minimal footprint: vanilla JavaScript, HTML 5, and CCS 3 - no external build tools.
+- Responsive layout (no media queries).
+- Minimal architecture: vanilla JavaScript, HTML5, and CCS3 - no external build tools.
 - Advanced SEO: [Open Graph]( https://ogp.me/) meta tags for social share on Facebook and Twitter and [JSON-LD]( https://developers.google.com/search/docs/guides/intro-structured-data) schema for search engines.
-- Lite YouTube JavaScript that loads videos embedded from YouTube only when the user clicks it.
+- Lite YouTube JavaScript that loads videos embedded from YouTube only when the user clicks.
 - Automatically optimized images.
-- Minified code (HTML, CSS, and JavaScript).
+- Minified code.
 - Maximized performance.
 - Semantic and accessible markup.
 - Supports RTL layout.
-- Cache and security headers.
+- Cache and security configuration.
 
----
+### Table of Contents
 
 To adapt the theme to your needs, please see the various sections of this guide.
 
@@ -31,8 +31,6 @@ To adapt the theme to your needs, please see the various sections of this guide.
 - [Contributions](https://github.com/ironnysh/mighty#contributions)
 - [Directory structure](https://github.com/ironnysh/mighty#directory-structure)
 - [File overview](https://github.com/ironnysh/mighty#file-overview)
-
----
 
 ## Getting started
 
@@ -82,7 +80,7 @@ Click this button to host your site on Vercel:
 This is what you should use after clicking the button - note the override of the default OUTPUT DIRECTORY:
 ![screenshot: deploy the site to Vercel](vercel_delpoy.webp)
 
-## Customize and edit the content and design
+## Customize and edit the content, color schemes, and fonts
 
 ### Edit the content
 There are three files to edit (see the [File overview](https://github.com/ironnysh/mighty#file-overview) below for details):
@@ -92,7 +90,7 @@ There are three files to edit (see the [File overview](https://github.com/ironny
 
 *Note: you can safely delete this `README` file, as well `Subset-google_fonts.webp`, `vercel_delpoy.webp`, and `mighty.webp` - they're here to help you set up the site.
 
-### Edit the design
+### Change colors and fonts
 Open `src/_includes/utilities/style.css` and edit any CSS attribute you'd like.
 The most relevant parts are probably the colors and fonts:
 1. All the colors are defined as CSS variables on the top. Change the `hsl` values to the color scheme you want.
@@ -107,8 +105,8 @@ You can either include a new SVG file in `src/_includes/svg` or paste the code d
 ### Replace images and fonts
 The `src/assets` folder includes all the non-code files: fonts, images, and favicon. You can replace these with your graphics and fonts. Please note: if you decide to change the names of the images, update them accordingly in the code (it's recommended to use the `Find and Replace` option in your code editor).
 
-#### Tips
-**Language**: for non-US English sites, set the required language in the first line of `src/_data/settings.json`. Check out the [full list of language and country codes](https://www.fincher.org/Utilities/CountryLanguageList.shtml) to find the appropriate one. If you choose Hebrew (he-IL), the site will automatically change the display direction to right-to-left (RTL).
+## Tips
+**Language**: For a non-US English site, set the language in the first line of `src/_data/settings.json`. Check out the [complete list of language and country codes](https://www.fincher.org/Utilities/CountryLanguageList.shtml) and copy the appropriate one. Setting it to Hebrew (he-IL) does require other fonts, but the layout will automatically change to right-to-left (RTL).
 
 **Social Image**: you can use a service like [Thumbnail.AI](https://thumbnail.ai) to generate a social image.
 
