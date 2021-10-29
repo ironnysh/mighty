@@ -1,6 +1,6 @@
 # Mighty Eleventy Starter
 
-![screenshot: a demo of Mighty used for a fictional hair salon](mighty.webp)
+![screenshot: a demo of Mighty used for a fake hair salon](mighty.webp)
 ## Summary
 
 Mighty is my attempt at using [Eleventy (11ty)](https://www.11ty.dev) to build a sort of Single Page Application (SPA) - a simple, elegant theme from which freelancers or small businesses can generate simple one-pagers.
@@ -36,16 +36,30 @@ To adapt the theme to your needs, please see the various sections of this guide.
 
 ## Getting started
 
-* If this is your first time working with Eleventy, SSGs, or Node, it might be a good idea to start with [https://www.tatianamac.com/posts/beginner-eleventy-tutorial-parti/](Tatiana Mac's comprehensive tutorial). The multi-part series is titled __Beginner's Guide to Eleventy__, but it's packed with incredibly useful information about all things web-dev. Highly recommended read.
+* If this is your first time working with Eleventy, static site generators (SSG), GitHub, or Node, it might be a good idea to start with [Tatiana Mac's comprehensive tutorial](https://www.tatianamac.com/posts/beginner-eleventy-tutorial-partii/). The multi-part series is titled __Beginner's Guide to Eleventy__, but it's packed with incredibly useful information about all things web-dev. Highly recommended read.
 
 ### 1. Clone this repository and install the project dependencies
-Copy the following command and paste it into your device's terminal to run a local copy of the site. Feel free to change `your-project-name` to your site's name.
+Copy the following command and paste it into your device's terminal to create a local copy of the site and install the project dependencies. Change `your-project-name` to your site's name.
 
 ```
 git clone --depth=1 https://github.com/ironnysh/mighty.git your-project-name
 cd your-project-name
 npm install
 ```
+
+**Or**
+
+### 1.1 Generate a repository from the template
+Click the green `use this template` button on the top to generate a repository under your GitHub account and copy all files into your new project.
+
+### 1.2 Create a local copy and install the project dependencies
+Copy the following command and paste it into your device's terminal to create a local copy of the site and install the project dependencies. Change `your-project-name` to your site's name.
+
+```
+cd your-project-name
+npm install
+```
+
 ### 2. Run Eleventy
 #### Locally
 Copy the following command and paste it into your device's terminal to generate a local copy of the site in the `www` directory. The files automatically update whenever you make changes to the files:
@@ -54,31 +68,31 @@ npm start
 ```
 Open your browser and type `http://localhost:8080` in the address bar to see your site.
 
-#### Remote
-When you're ready to deploy your site to a hosting provider, copy and paste the following command in your preferred hosting platform's settings section. It will generate a remote copy of the site in the `www` directory (*note: this also needs to be specified on Vercel See the screenshot below).
+#### Hosting
+When you're ready to deploy your site to a hosting provider, copy and paste the following command in your preferred hosting platform's settings section. It will generate a remote copy of the site in the `www` directory (*note: this also needs to be specified on Vercel. See the screenshot below).
 ```
 npm run build
 ```
-[Vercel](https://vercel.com) is my preferred hosting provider, but you can use any other service that supports static sites, including [Netlify](https://www.netlify.com), [Render](https://render.com), [Cloudflare Pages](https://pages.cloudflare.com),
+[Vercel](https://vercel.com) is my preferred hosting provider, but you can use any other service that supports static sites, including [Netlify](https://www.netlify.com), [Render](https://render.com), and [Cloudflare Pages](https://pages.cloudflare.com),
 
 Click this button to host your site on Vercel:
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ironnysh/mighty.git)
 
-This is what you should use when clicking the button:
+This is what you should use after clicking the button - note the override of the default OUTPUT DIRECTORY:
 ![screenshot: deploy the site to Vercel](vercel_delpoy.webp)
 
-## Customize and adapt the content and design
+## Customize and edit the content and design
 
-###  Change the content
+### Edit the content
 There are three files to edit (see the [File overview](https://github.com/ironnysh/mighty#file-overview) below for details):
 1. `src/_data/settings.json` - change the values to the right of the colon of each key. E.g., `url` should be your site's address, `author` should be your name, `phoneNumber` should be your number (change `phoneCall` accordingly, keeping the format to allow tap-to-call on mobile), etc. This is also where you can change the labels of the top navigation. E.g., `products` and `work` instead of `services` and `portfolio`.
-2. `src/_data/content.json` - text displayed on the homepage: title and paragraphs of the About section; titles and summaries of the Services section; titles, summaries, and video IDs for the Portfolio; and privacy policy references. You can change the values to the right of the colon of the `title`, `summary`, and `videoID` keys. Unless you plan to add an analytics service, you can leave the privacy section as-is.
-3. `src/imprint.md` - your personal details and contact information (Masthead) are generated automatically based on the details provided in the `_data/settings.json`. Unless you plan to add analytics or other tracking services, you can leave the Data Protection and GDPR sections as-is. The other privacy references on the page are generated automatically based on the information provided in the privacy section of the `_data/content.json`. You can update the relevant credits under the Colophon according to your sources.
+3. `src/_data/content.json` - text displayed on the homepage: title and paragraphs of the About section; titles and summaries of the Services section; titles, summaries, and video IDs for the Portfolio; and privacy policy references. You can change the values to the right of the colon of the `title`, `summary`, and `videoID` keys. Unless you plan to add an analytics service, you can leave the privacy section as-is.
+4. `src/imprint.md` - your personal details and contact information (Masthead) are generated automatically based on the details provided in the `_data/settings.json`. Unless you plan to add analytics or other tracking services, you can leave the Data Protection and GDPR sections as-is. The other privacy references on the page are generated automatically based on the information provided in the privacy section of the `_data/content.json`. You can update the relevant credits under the Colophon according to your sources.
 
-*Note: you can safely delete this `README` file, as well the `Subset-google_fonts.webp` - they're here to help you set up the site.
+*Note: you can safely delete this `README` file, as well `Subset-google_fonts.webp`, `vercel_delpoy.webp`, and `mighty.webp` - they're here to help you set up the site.
 
-### Change the design
+### Edit the design
 Open `src/_includes/utilities/style.css` and edit any CSS attribute you'd like.
 The most relevant parts are probably the colors and fonts:
 1. All the colors are defined as CSS variables on the top. Change the `hsl` values to the color scheme you want.
@@ -94,6 +108,8 @@ You can either include a new SVG file in `src/_includes/svg` or paste the code d
 The `src/assets` folder includes all the non-code files: fonts, images, and favicon. You can replace these with your graphics and fonts. Please note: if you decide to change the names of the images, update them accordingly in the code (it's recommended to use the `Find and Replace` option in your code editor).
 
 #### Tips
+**Language**: for non-US English sites, set the required language in the first line of `src/_data/settings.json`. Check out the [full list of language and country codes](https://www.fincher.org/Utilities/CountryLanguageList.shtml) to find the appropriate one. If you choose Hebrew (he-IL), the site will automatically change the display direction to right-to-left (RTL).
+
 **Social Image**: you can use a service like [Thumbnail.AI](https://thumbnail.ai) to generate a social image.
 
 **Optimize Fonts**: _Fredericka the great_ is quite a large font file, even when limited to the Latin alphabet. You can optimize it further by downloading a "leaner" version of it from Google Fonts. Follow these steps:
