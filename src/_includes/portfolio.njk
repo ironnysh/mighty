@@ -3,7 +3,7 @@
     <ul class="videos">
       {%- for portfolio in content.portfolio %}
         <li class="clip">
-          <h3>{{ portfolio.title }}</h3>
+          <h3>{{ portfolio.title | upper }}</h3>
           <p>{{ portfolio.summary }}</p>
           {# The wrapper for the image placholder/YouTube embed. See the script in src/_includes/utilities/liteYoutube.js #}
           <button type="button" class="player" id="{{ portfolio.videoID }}" aria-label="{{ portfolio.title }}" data-title="{{ portfolio.title }}"></button>
