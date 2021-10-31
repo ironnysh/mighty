@@ -1,6 +1,6 @@
 # Mighty Eleventy Starter
 
-![screenshot: a demo of Mighty used for a fake hair salon](mighty.webp)
+![screenshot: a demo of Mighty used for a fake hair salon](mighty-demo-screenshot.webp)
 ## Summary
 
 Mighty is my attempt at using [Eleventy (11ty)](https://www.11ty.dev) to build a sort of Single Page Application (SPA) - a simple, elegant theme from which freelancers or small businesses can generate simple one-pagers.
@@ -78,7 +78,7 @@ Click this button to host your site on Vercel:
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ironnysh/mighty.git)
 
 This is what you should use after clicking the button - note the override of the default OUTPUT DIRECTORY:
-![screenshot: deploy the site to Vercel](vercel_delpoy.webp)
+![screenshot: deploy the site to Vercel](delpoy-to-vercel.webp)
 
 ## Customize and edit the content, color schemes, and fonts
 
@@ -88,7 +88,7 @@ There are three files to edit (see the [File overview](https://github.com/ironny
 3. `src/_data/content.json` - text displayed on the homepage: title and paragraphs of the About section; titles and summaries of the Services section; titles, summaries, and video IDs for the Portfolio; and privacy policy references. You can change the values to the right of the colon of the `title`, `summary`, and `videoID` keys. Unless you plan to add an analytics service, you can leave the privacy section as-is.
 4. `src/imprint.md` - your personal details and contact information (Masthead) are generated automatically based on the details provided in the `_data/settings.json`. Unless you plan to add analytics or other tracking services, you can leave the Data Protection and GDPR sections as-is. The other privacy references on the page are generated automatically based on the information provided in the privacy section of the `_data/content.json`. You can update the relevant credits under the Colophon according to your sources.
 
-*Note: you can safely delete this `README` file, as well `Subset-google_fonts.webp`, `vercel_delpoy.webp`, and `mighty.webp` - they're here to help you set up the site.
+*Note: you can safely delete this `README` file, as well `subset-google_fonts.webp`, `delpoy-to-vercel.webp`, and `mighty-demo-screenshot.webp` - they're here to help you set up the site.
 
 ### Change colors and fonts
 Open `src/_includes/utilities/style.css` and edit any CSS attribute you'd like.
@@ -119,7 +119,7 @@ https://fonts.googleapis.com/css?family=Fredericka+the+Great&text=YOUR-LETTERS-H
 3. Paste the whole URL into your browser address bar (the Google Fonts link and your letters) and hit `Enter`.
 4. You'll see a plain HTML page with a few lines of code. Copy the part inside the parentheses after `src: url` - see the yellow line in the screenshot:
 
-![screenshot: CSS code of a subsetted font from Google Fonts](Subset-google_fonts.webp)
+![screenshot: CSS code of a subsetted font from Google Fonts](subset-google_fonts.webp)
 
 5. Paste this URL you copied into your browser address bar, hit `Enter`, and save the optimized font file to your device.
 6. Rename the downloaded file to `fredericka-the-great-subset`, copy it, and paste it into your site's `src/assets` folder to replace the current file.
