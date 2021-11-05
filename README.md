@@ -24,13 +24,13 @@ Mighty is my attempt at using [Eleventy (11ty)](https://www.11ty.dev) to build a
 
 To adapt the theme to your needs, please see the various sections of this guide.
 
-- [Getting started](https://github.com/ironnysh/mighty#getting-started)
-- [Customize](https://github.com/ironnysh/mighty#customize-and-adapt-the-content-and-design)
-- [Tips](https://github.com/ironnysh/mighty#tips)
-- [Epilogue](https://github.com/ironnysh/mighty#epilogue)
-- [Contributions](https://github.com/ironnysh/mighty#contributions)
-- [Directory structure](https://github.com/ironnysh/mighty#directory-structure)
-- [File overview](https://github.com/ironnysh/mighty#file-overview)
+- [Getting started](#getting-started)
+- [Customize](#customize-and-adapt-the-content-and-design)
+- [Tips](#tips)
+- [Epilogue](#epilogue)
+- [Contributions](#contributions)
+- [Directory structure](#directory-structure)
+- [File overview](#file-overview)
 
 ## Getting started
 
@@ -83,7 +83,7 @@ This is what you should use after clicking the button - note the override of the
 ## Customize and edit the content, color schemes, and fonts
 
 ### Edit the content
-There are three files to edit (see the [File overview](https://github.com/ironnysh/mighty#file-overview) below for details):
+There are three files to edit (see the [File overview](#file-overview) below for details):
 1. `src/_data/settings.json` - change the values to the right of the colon of each key. E.g., `url` should be your site's address, `author` should be your name, `phoneNumber` should be your number (change `phoneCall` accordingly, keeping the format to allow tap-to-call on mobile), etc. This is also where you can change the labels of the top navigation. E.g., `products` and `work` instead of `services` and `portfolio`.
 3. `src/_data/content.json` - text displayed on the homepage: title and paragraphs of the About section; titles and summaries of the Services section; titles, summaries, and video IDs for the Portfolio; and privacy policy references. You can change the values to the right of the colon of the `title`, `summary`, and `videoID` keys. Unless you plan to add an analytics service, you can leave the privacy section as-is.
 4. `src/imprint.md` - your personal details and contact information (Masthead) are generated automatically based on the details provided in the `_data/settings.json`. Unless you plan to add analytics or other tracking services, you can leave the Data Protection and GDPR sections as-is. The other privacy references on the page are generated automatically based on the information provided in the privacy section of the `_data/content.json`. You can update the relevant credits under the Colophon according to your sources.
@@ -94,7 +94,7 @@ There are three files to edit (see the [File overview](https://github.com/ironny
 Open `src/_includes/utilities/style.css` and edit any CSS attribute you'd like.
 The most relevant parts are probably the colors and fonts:
 1. All the colors are defined as CSS variables on the top. Change the `hsl` values to the color scheme you want.
-2. There are three fonts in use (see the [File overview](https://github.com/ironnysh/mighty#file-overview) below). If you delete or replace any of them, update the references in two places: the `@font-face` rules at the top and the `font-family` variable. There are fallback system fonts for each.
+2. There are three fonts in use (see the [File overview](#file-overview) below). If you delete or replace any of them, update the references in two places: the `@font-face` rules at the top and the `font-family` variable. There are fallback system fonts for each.
 **Important**: for better performance, the fonts are preloaded in the `head` of the main layout (`src/_includes/layouts/default.njk`) - delete or update these lines according to the fonts you use.
 
 ### Contact icons
