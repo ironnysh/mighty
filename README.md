@@ -25,7 +25,7 @@ Mighty is my attempt at using [Eleventy (11ty)](https://www.11ty.dev) to build a
 To adapt the theme to your needs, please see the various sections of this guide.
 
 - [Getting started](#getting-started)
-- [Customize](#customize-and-adapt-the-content-and-design)
+- [Customize](#customize-and-edit-the-content-color-schemes-and-fonts)
 - [Tips](#tips)
 - [Epilogue](#epilogue)
 - [Contributions](#contributions)
@@ -133,7 +133,7 @@ Soon after I started tinkering with it, I noticed Eleventy had a nice side effec
 
 Now, after (gradually) overcoming my impostor syndrome, I want to give back to this incredible community (open source in general, and [Eleventy](https://discord.com/invite/GBkBy9u) in particular): I'm releasing this project under [MIT/CC BY-NC-SA 4.0 License](LICENSE).
 
-Have fun, and I hope you find it useful, interesting, and valuable.
+Have fun, and I hope you find it interesting and valuable.
 
 ## Contributions
 
