@@ -28,7 +28,7 @@
 				},
 				{
 					"key": "Content-Security-Policy",
-					"value": "default-src 'self'; img-src 'self' https://i.ytimg.com; style-src 'self' https: 'unsafe-inline'; script-src 'self' https: 'unsafe-inline'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com/; upgrade-insecure-requests; base-uri 'self';"
+					"value": "default-src 'self'; img-src 'self' https://i.ytimg.com; style-src 'self' https: 'unsafe-inline'; font-src https://fonts.gstatic.com; script-src 'self' https: 'unsafe-inline'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com/; upgrade-insecure-requests; base-uri 'self';"
 				},
 				{
 					"key": "Referrer-Policy",
