@@ -6,11 +6,15 @@
   <title>{{ settings.title }}</title>
   <meta name="description" content="{{ settings.description }}">
 
-<!-- Fonts -->
+<!-- Fonts 
   <link rel="preload" as="image" type="image/webp" href="/assets/hero-image.webp" />
   <link rel="preload" as="font" type="font/woff2" href="/assets/fredericka-the-great-subset.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/assets/patua-one.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/assets/catamaran.woff2" crossorigin />
+-->
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Catamaran&family=Fredericka+the+Great&family=Patua+One&display=swap" as="style" onload="this.rel='stylesheet'">
 
   <link rel="canonical" href="{{ settings.url }}" />
   <meta name="twitter:card" content="summary">
