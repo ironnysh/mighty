@@ -3,7 +3,7 @@
 ![screenshot: a demo of Mighty used for a fake hair salon](mighty-demo-screenshot.webp)
 ## Summary
 
-Mighty is my attempt at using [Eleventy (11ty)](https://www.11ty.dev) to build a sort of Single Page Application (SPA) - a simple, elegant theme from which freelancers or small businesses can generate simple one-pagers.
+Mighty is [Eleventy (11ty)](https://www.11ty.dev) to build a sort of Single Page Application (SPA) - a simple, elegant theme from which freelancers or small businesses can generate simple one-pagers.
 
 [Here's a demo of the site.](https://mighty-site.vercel.app)
 
