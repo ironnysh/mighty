@@ -13,6 +13,9 @@
 	--sm-spacer: 0.5rem;
 	--md-spacer: 1rem;
 	--xl-spacer: 1.5rem;
+
+	--gallery-bg-color-alpha: hsl(0 0% 0% / 0.5);
+	--gallery-bg-color-alpha-0: hsl(0 0% 0% / 0);
 }
 
 /* Fonts */
@@ -52,10 +55,10 @@ html {
 body {
 	font-family: "Catamaran", system-ui, sans-serif;
 	font-style: normal;
-  line-height: 1.6;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  margin: var(--center);
+	line-height: 1.6;
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+	margin: var(--center);
 	color: var(--text-color);
 	background-color: var(--bg-color);
 }
@@ -261,32 +264,17 @@ img {
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	background:
-		/* Left & Right Borders */
-    linear-gradient(
-			90deg,
-			hsl(0 0% 91%),
-			var(--bg-color)
-		),
-		linear-gradient(
-      90deg,
-      var(--bg-color),
-      hsl(0 0% 91%)) 100% 0,
-		/* Shadows */
-			radial-gradient(
-				farthest-side at 0 50%,
-				hsl(0 0% 0% / 0.2),
-				hsl(0 0% 0% / 0%)
-			),
-		radial-gradient(
-				farthest-side at 100% 50%,
-				hsl(0 0% 0% / 0.2),
-				hsl(0 0% 0% / 0%)
-			)
-			100% 0;
-	background-repeat: no-repeat;
+		linear-gradient(90deg, currentColor 91%, currentColor 90%),
+		linear-gradient(90deg, currentColor 90%, currentColor 91%) 100% 0,
+		radial-gradient(farthest-side at 0 50%, var(--gallery-bg-color-alpha), var(--gallery-bg-color-alpha-0)),
+		radial-gradient(farthest-side at 100% 50%, var(--gallery-bg-color-alpha), var(--gallery-bg-color-alpha-0)) 100% 0;
 	background-color: inherit;
-	background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+	background-repeat: no-repeat;
 	background-attachment: local, local, scroll, scroll;
+	background-size: 0px 100%,
+		0px 100%,
+		10px 100%,
+		10px 100%;
 }
 
 .clip {
