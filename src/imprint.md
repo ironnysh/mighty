@@ -51,5 +51,5 @@ GitHub is used to host the code related to this site ([read GitHub’s privacy p
 - Hero photo by [Adam Winger](https://unsplash.com/@awcreativeut) on Unsplash.
 - Fonts: Catamaran (body text), Patua One (headings), Fredericka the Great (tagline). Source: [Google Fonts](https://fonts.google.com); served locally.
 
-<time datetime="{{ helpers.lastUpdate() }}">Latest update: {{ helpers.lastUpdate() }}</time>
+<time datetime="{{ helpers.lastUpdate() }}">Last update: {{ helpers.lastUpdate() }}</time>
 </article>
