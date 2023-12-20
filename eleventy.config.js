@@ -1,14 +1,10 @@
-import htmlMinifier from "html-minifier";
-const minifyHTML = htmlMinifier.minify;
 
 /**
  * @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
  * @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
  */
 
-export default function (eleventyConfig) {
-	eleventyConfig.setDataDeepMerge(true);
-	eleventyConfig.addWatchTarget("src/_data/");
+module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/assets");
 
 	// Minify code
@@ -18,7 +14,7 @@ export default function (eleventyConfig) {
 			path &&
 			path.endsWith(".html")
 		) {
-			return minifyHTML(content, {
+			return require("html-minifier").minify(content, {
 				useShortDoctype: true,
 				removeComments: true,
 				collapseWhitespace: true,
