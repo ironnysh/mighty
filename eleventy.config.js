@@ -1,5 +1,3 @@
-import htmlMinifier from "html-minifier";
-const minifyHTML = htmlMinifier.minify;
 
 /**
  * @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
