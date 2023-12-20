@@ -1,6 +1,6 @@
 ---
-title: Site Notice & Privacy Policy
 layout: default
+title: Site Notice & Privacy Policy
 ---
 <article class="{{ page.fileSlug }}">
 

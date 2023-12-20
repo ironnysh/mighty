@@ -7,8 +7,6 @@ const minifyHTML = htmlMinifier.minify;
  */
 
 export default function (eleventyConfig) {
-	eleventyConfig.setDataDeepMerge(true);
-	eleventyConfig.addWatchTarget("src/_data/");
 	eleventyConfig.addPassthroughCopy("src/assets");
 
 	// Minify code
