@@ -1,7 +1,7 @@
 {
 	"language": "en-US",
 	"title": "Cutting Edge Bangs",
-	"description": "A boutique hair salon in London. Specializing in bangs that go BANG!",
+	"description": "A boutique hair salon in Chicago. Specializing in bangs that go BANG!",
 	"author": "Curly Simon",
 	"url": "https://mighty-site.vercel.app",
 	"socialImage": "/assets/social-image.jpg",
@@ -14,7 +14,7 @@
 			"street": "Main St.",
 			"streetNumber": "42",
 			"postcode": "90210",
-			"city": "London"
+			"city": "Chicago"
 		}
 	},
 	"navigation": [

@@ -22,18 +22,18 @@ layout: default
 ## Privacy Policy
 
 ### Data protection
-The operator of this website takes the protection of your personal data very seriously and values your privacy. The use of this website does not involve tracking or collecting information, personal or other.
+The operator of this website takes the protection of your personal data very seriously and values your privacy. Browsing this website does not involve tracking or collection of information.
 
 
-The YouTube videos are embedded using the platform’s Enhanced Privacy Mode, offering encrypted media and no cookie-based tracking.
+The embedded YouTube videos use the platform’s Enhanced Privacy Mode, offering encrypted media and no cookie-based tracking.
 
 
 Similarly, none of the links to external sources featured on the site contain any tracking components.
 
 ### GDPR
-This website uses third-party services, such as GitHub and Vercel. While these services have their own privacy and data retention policy, they are GDPR compliant.
+This website uses third-party services, such as GitHub and Vercel. While they have their own privacy and data retention policy, they are GDPR compliant.
 
-GitHub is used to host the code related to this site ([read GitHub’s privacy policy](https://help.github.com/articles/github-privacy-statement/)), and Vercel is used to host the actual website you are currently browsing ([read Vercel’s GDPR policy](https://vercel.com/legal/privacy-policy)).
+GitHub is where we host the code and other assets related to this site ([read GitHub’s privacy policy](https://help.github.com/articles/github-privacy-statement/)), and Vercel is where we host the rendered website you're browsing ([read Vercel’s GDPR policy](https://vercel.com/legal/privacy-policy)).
 
 <ul class="columns">
 {% for privacy in content.privacy %}

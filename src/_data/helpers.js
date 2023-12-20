@@ -1,6 +1,6 @@
-module.exports = {
+export default {
 	environment: process.env.ELEVENTY_ENV,
-	
+
 	currentYear() {
 		const today = new Date();
 		return today.getFullYear();

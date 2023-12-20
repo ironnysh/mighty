@@ -1,4 +1,12 @@
-module.exports = function (eleventyConfig) {
+import htmlMinifier from "html-minifier";
+const minifyHTML = htmlMinifier.minify;
+
+/**
+ * @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
+ * @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
+ */
+
+export default function (eleventyConfig) {
 	eleventyConfig.setDataDeepMerge(true);
 	eleventyConfig.addWatchTarget("src/_data/");
 	eleventyConfig.addPassthroughCopy("src/assets");
@@ -10,7 +18,7 @@ module.exports = function (eleventyConfig) {
 			path &&
 			path.endsWith(".html")
 		) {
-			return require("html-minifier").minify(content, {
+			return minifyHTML(content, {
 				useShortDoctype: true,
 				removeComments: true,
 				collapseWhitespace: true,
@@ -21,15 +29,6 @@ module.exports = function (eleventyConfig) {
 			});
 		}
 		return content;
-	});
-
-	// browserSync
-	eleventyConfig.setBrowserSyncConfig({
-		snippet: false,
-		ui: false,
-		// Uncomment the following line to enable https mode
-		// https: true,
-		port: 8080,
 	});
 
 	// Alias `layouts/default.njk` to `layout: default`
