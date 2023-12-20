@@ -89,8 +89,8 @@ This is what you should see after clicking the button. Note the override of the 
 ### Edit the content
 There are three files to edit (see the [File overview](#file-overview) below for details):
 1. `src/_data/settings.json` - change the values to the right of the colon of each key. E.g., `url` should be your site's address, `author` should be your name, `phoneNumber` should be your number (change `phoneCall` accordingly, keeping the format to allow tap-to-call on mobile), etc. This is also where you can change the labels of the top navigation. E.g., `products` and `work` instead of `services` and `portfolio`.
-2. `src/_data/content.json` - text displayed on the homepage: title and paragraphs of the **About** section; titles and summaries of the **Services** section; titles, summaries, and video IDs for the *Portfolio*; and privacy policy references. You can change the values to the right of the colon of the `title`, `summary`, and `videoID` keys. Unless you plan to add an analytics service, you can leave the privacy section as-is.
-#. `src/imprint.md` - your personal details and contact information (Masthead) are generated automatically based on the details provided in the `_data/settings.json`. Unless you plan to add analytics or other tracking services, you can leave the _Data Protection_ and _GDPR_ sections as-is. The other privacy references on the page are generated automatically based on the information provided in the privacy section of the `_data/content.json`. You can update the relevant credits under the _Colophon_ according to your sources and service providers.
+2. `src/_data/texts.json` - text displayed on the homepage: title and paragraphs of the **About** section; titles and summaries of the **Services** section; titles, summaries, and video IDs for the *Portfolio*; and privacy policy references. You can change the values to the right of the colon of the `title`, `summary`, and `videoID` keys. Unless you plan to add an analytics service, you can leave the privacy section as-is.
+#. `src/imprint.md` - your personal details and contact information (Masthead) are generated automatically based on the details provided in the `_data/settings.json`. Unless you plan to add analytics or other tracking services, you can leave the _Data Protection_ and _GDPR_ sections as-is. The other privacy references on the page are generated automatically based on the information provided in the privacy section of the `_data/texts.json`. You can update the relevant credits under the _Colophon_ according to your sources and service providers.
 
 *Note: you can delete this `README` file, as well `subset-google_fonts.webp`, `delpoy-to-vercel.webp`, and `mighty-demo-screenshot.webp`. These files are here to help you set up the site.
 
@@ -152,7 +152,7 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 .
 ├── src
 │   └── _data
-│       └── content.json
+│       └── texts.json
 │       └── settings.json
 │       └── helpers.js
 │   └── _includes
@@ -223,7 +223,7 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 - `robots.njk` - 11ty template for generating a generic `robots.txt` file for search engines, web crawlers, and bots.
 
 `src/_data`:
-- `content.json` - all the content on the homepage: text for the About, Services, Portfolio, and privacy policy references.
+- `texts.json` - all the content on the homepage: text for the About, Services, Portfolio, and privacy policy references.
 - `settings.json` - site and business details: title, name, address, other contact details; and the navigation items in the header.
 - `helpers.js` - JavaScript date utilities and environment variables used when developing and building the site.
 

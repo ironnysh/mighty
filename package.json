@@ -9,7 +9,8 @@
 	},
 	"scripts": {
 		"start": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
-		"build": "ELEVENTY_ENV=production npx @11ty/eleventy"
+		"build": "ELEVENTY_ENV=production npx @11ty/eleventy",
+		"debug": "DEBUG=Eleventy* npx @11ty/eleventy"
 	},
 	"keywords": [
 		"Mighty",

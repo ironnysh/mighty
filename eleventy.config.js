@@ -4,7 +4,7 @@
  * @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
  */
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/assets");
 
 	// Minify code
@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
 			path &&
 			path.endsWith(".html")
 		) {
-			return require("html-minifier").minify(content, {
+			return minifyHTML(content, {
 				useShortDoctype: true,
 				removeComments: true,
 				collapseWhitespace: true,
