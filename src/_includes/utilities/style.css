@@ -11,8 +11,8 @@
 	--center: 0 auto;
 	--full-width: 100%;
 	--sm-spacer: 0.5rem;
-	--md-spacer: calc(--sm-spacer * 2);
-	--xl-spacer: calc(--sm-spacer * 3);
+	--md-spacer: calc(var(--sm-spacer) * 2);
+	--xl-spacer: calc(var(--sm-spacer) * 3);
 
 	--gallery-bg-color-alpha: hsl(0 0% 0% / 0.5);
 	--gallery-bg-color-alpha-0: hsl(0 0% 0% / 0);
