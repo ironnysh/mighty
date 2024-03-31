@@ -4,7 +4,7 @@ media:
 content:
   - name: homepage
     label: Homepage
-    path: src/index.njk
+    path: src/imprint.md
     type: file
     fields:
       - name: title
