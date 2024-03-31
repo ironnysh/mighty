@@ -20,16 +20,16 @@ content:
         type: object
         fields:
           - { name: title, label: Title, type: string}
-          - { name: paragraph1, label: First paragraph, type: text, options: maxlenght: 140}
+          - { name: paragraph1, label: First paragraph, type: text, options: { maxlenght: 140 } }
           - { name: urlToReadme, label: README URL, type: string}
           - { name: linkToReadme, label: README link text, type: string}
-          - { name: paragraph2, label: Second paragraph, type: text, options: maxlenght: 140}
+          - { name: paragraph2, label: Second paragraph, type: text, options: { maxlenght: 140 } }
       - name: services
         label: Services
         type: object
         fields:
           - { name: title, label: Title, type: string }
-          - { name: summary, label: Summary, type: text, options: maxlenght: 140 }
+          - { name: summary, label: Summary, type: text, options: { maxlenght: 140 } }
   - name: site
     label: Site settings
     path: src/_data/settings.json
