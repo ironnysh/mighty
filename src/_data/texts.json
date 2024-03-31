@@ -1,77 +1,75 @@
 {
-	"about": 
-		{
-			"title": "Every Face Can Make a Bang if You Know How to Cut it",
-			"paragraph_one": "Hi, I'm Ronny Shani, writer and web maker. Mighty is my attempt at using Eleventy to build a one-pager or landing page - a simple, elegant theme from which freelancers or small businesses can generate easy-to-maintain one-pagers. This is a demo of the project, featuring a fake hair salon in London. To install, customize, and adapt the theme to your needs, please ",
-			"paragraph_two": "And now, some Cheese Lorem Ipsum for your enjoyment: Manchego babybel parmesan. Cheese slices lancashire cow cheese strings jarlsberg cheese and wine lancashire bavarian bergkase. Cheese slices babybel gouda manchego everyone loves pecorino taleggio melted cheese. Swiss.",
-			"urlToReadme": "https://github.com/ironnysh/mighty/blob/main/README.md",
-			"linkToReadme": "see the README file on GitHub."
-		}
-	,
-	"services": [
-		{
-			"title": "I love cheese",
-			"summary": "Cheese on toast halloumi macaroni cheese. Camembert de normandie bergkase slices everyone "
-		},
-		{
-			"title": "Port-salut ricotta",
-			"summary": "Cheesy grin blue castello danish fontina the big cheese cheese and biscuits lancashire port-salut cheesy feet."
-		},
-		{
-			"title": "Gouda chalk and cheeseburger",
-			"summary": "Cheese strings edam cow blue castello lancashire parmesan babybel smelly cheese."
-		},
-		{
-			"title": "Edam bishop fondue",
-			"summary": "Taleggio pepper jack cheddar parmesan camembert de normandie danish fontina everyone loves bocconcini."
-		},
-		{
-			"title": "Ricotta goat",
-			"summary": "Blue castello boursin."
-		},
-		{
-			"title": "Babybel cottage",
-			"summary": "Paneer smelly cheese bavarian bergkase squirty cheese babybel edam."
-		},
-		{
-			"title": "The croque monsieur",
-			"summary": "Airedale edam everyone loves cottage cheese gouda manchego smelly cheese cheese slices."
-		}
-	],
-	"portfolio": [
-		{
-			"title": "Nancy Sinatra - Bang Bang",
-			"summary": "Sinatra began her career as a singer and actress in the early 1960s, but initially achieved success only in Europe and Japan.",
-			"videoID": "BkKDSFYvxKU"
-		},
-		{
-			"title": "Chitty Chitty Bang Bang",
-			"summary": "Chitty Chitty Bang Bang is a 1968 British-American musical adventure fantasy film, directed by Ken Hughes and written by Roald Dahl and Hughes.",
-			"videoID": "ZrbMru0wUyA"
-		},
-		{
-			"title": "Bang Bang Lucky Luke",
-			"summary": "Lucky Luke is a Western bande dessinée series created by Belgian cartoonist Morris in 1946. Morris wrote and drew the series single-handedly.",
-			"videoID": "mjOIVtzWVU8"
-		},
-		{
-			"title": "DIY",
-			"summary": "This is why you should not try to cut your bangs at home. Just give us a call - we promise you won't regret it.",
-			"videoID": "ClZ5qqx6ybk"
-		}
-	],
-	"privacy": [
-		{
-			"title": "Analytics",
-			"summary": "This website does not use any traffic analysis service."
-		},
-		{
-			"title": "Cookies",
-			"summary": "This website does not use cookies."
-		},
-		{
-			"title": "SSL encryption",
-			"summary": "This website uses SSL encryption."
-		}
-	]
+  "about": {
+    "title": "Every Face Can Make a Bang if You Know How to Cut it",
+    "paragraph_one": "Hi, I'm Ronny Shani, writer and web maker. Mighty is my attempt at using Eleventy to build a one-pager or landing page—a simple, elegant theme from which freelancers or small businesses can generate easy-to-maintain one-pagers. This is a demo of the project, featuring a fake hair salon in London. To install, customize, and adapt the theme to your needs, please ",
+    "paragraph_two": "And now, some Cheese Lorem Ipsum for your enjoyment: Manchego babybel parmesan. Cheese slices lancashire cow cheese strings jarlsberg cheese and wine lancashire bavarian bergkase. Cheese slices babybel gouda manchego everyone loves pecorino taleggio melted cheese. Swiss.",
+    "urlToReadme": "https://github.com/ironnysh/mighty/blob/main/README.md",
+    "linkToReadme": "see the README file on GitHub."
+  },
+  "services": [
+    {
+      "title": "I love cheese",
+      "summary": "Cheese on toast halloumi macaroni cheese. Camembert de normandie bergkase slices everyone "
+    },
+    {
+      "title": "Port-salut ricotta",
+      "summary": "Cheesy grin blue castello danish fontina the big cheese cheese and biscuits lancashire port-salut cheesy feet."
+    },
+    {
+      "title": "Gouda chalk and cheeseburger",
+      "summary": "Cheese strings edam cow blue castello lancashire parmesan babybel smelly cheese."
+    },
+    {
+      "title": "Edam bishop fondue",
+      "summary": "Taleggio pepper jack cheddar parmesan camembert de normandie danish fontina everyone loves bocconcini."
+    },
+    {
+      "title": "Ricotta goat",
+      "summary": "Blue castello boursin."
+    },
+    {
+      "title": "Babybel cottage",
+      "summary": "Paneer smelly cheese bavarian bergkase squirty cheese babybel edam."
+    },
+    {
+      "title": "The croque monsieur",
+      "summary": "Airedale edam everyone loves cottage cheese gouda manchego smelly cheese cheese slices."
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "Nancy Sinatra - Bang Bang",
+      "summary": "Sinatra began her career as a singer and actress in the early 1960s, but initially achieved success only in Europe and Japan.",
+      "videoID": "BkKDSFYvxKU"
+    },
+    {
+      "title": "Chitty Chitty Bang Bang",
+      "summary": "Chitty Chitty Bang Bang is a 1968 British-American musical adventure fantasy film, directed by Ken Hughes and written by Roald Dahl and Hughes.",
+      "videoID": "ZrbMru0wUyA"
+    },
+    {
+      "title": "Bang Bang Lucky Luke",
+      "summary": "Lucky Luke is a Western bande dessinée series created by Belgian cartoonist Morris in 1946. Morris wrote and drew the series single-handedly.",
+      "videoID": "mjOIVtzWVU8"
+    },
+    {
+      "title": "DIY",
+      "summary": "This is why you should not try to cut your bangs at home. Just give us a call—we promise you won't regret it.",
+      "videoID": "ClZ5qqx6ybk"
+    }
+  ],
+  "privacy": [
+    {
+      "title": "Analytics",
+      "summary": "This website does not use any traffic analysis service."
+    },
+    {
+      "title": "Cookies",
+      "summary": "This website does not use cookies."
+    },
+    {
+      "title": "SSL encryption",
+      "summary": "This website uses SSL encryption."
+    }
+  ]
 }
