@@ -10,8 +10,8 @@ content:
       - { name: title, label: Title, type: string }
       - { name: layout, label: Layout, type: string, hidden: true, default: default }
       - { name: body, label: Body, type: rich-text }
-  - name: sections
-    label: Sections
+  - name: homepage
+    label: Homepage sections
     path: src/_data/texts.json
     type: file
     format: json
