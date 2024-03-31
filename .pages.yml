@@ -32,6 +32,14 @@ content:
         fields:
           - { name: title, label: Title, type: string }
           - { name: summary, label: Summary, type: text, options: { maxlenght: 140 } }
+      - name: portfolio
+        label: Portfolio
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: summary, label: Summary, type: text, options: { maxlenght: 140 } }
+          - { name: videoID, label: Video ID, type: string }
   - name: site
     label: Site settings
     path: src/_data/settings.json
