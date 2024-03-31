@@ -18,21 +18,21 @@ content:
       - name: body
         label: Body
         type: rich-text
-        - name: contact
+      - name: contact
         label: Contact information
         type: object
         fields:
           - name: twitter
-            name: Twitter
+            label: Twitter
             type: string
-          - name: phoneCall
-            name: Phone call
+          - name: phone_call
+            label: Phone call
             type: string
-          - name: phoneNumber
-            name: Phone number
+          - name: phone_number
+            label: Phone number
             type: string
           - name: email
-            name: Email
+            label: Email
             type: string
   - name: sections
     label: Sections
