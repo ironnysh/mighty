@@ -2,4 +2,4 @@
 package-lock.json
 node_modules
 www
-.dccache
+.vscode/settings.json
