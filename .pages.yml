@@ -88,3 +88,13 @@ content:
               - name: city
                 label: City
                 type: string
+      - name: navigation
+        label: Navigation
+        type: object
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: url
+            label: URL
+            type: string
