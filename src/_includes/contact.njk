@@ -12,8 +12,8 @@
       {% if settings.contact.email %}
         <a href="mailto:{{ settings.contact.email }}?subject=Contact from the site" aria-label="Shoot me an email">{% include "svg/email.svg" %}</a>
       {% endif %}
-      {% if settings.contact.phoneCall and settings.contact.phoneNumber %}
-        <a href="tel:{{ settings.contact.phoneCall }}" aria-label="Give me a call">{% include "svg/phone.svg" %}</a>
+      {% if settings.contact.phone_call and settings.contact.phoneNumber %}
+        <a href="tel:{{ settings.contact.phone_call }}" aria-label="Give me a call">{% include "svg/phone.svg" %}</a>
       {% endif %}
       {% if settings.contact.twitter %}
         <a href="{{ settings.contact.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Follow on Twitter">{% include "svg/twitter.svg" %}</a>
