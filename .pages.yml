@@ -72,3 +72,19 @@ content:
           - name: email
             label: Email
             type: string
+          - name: address
+            label: Address
+            type: object
+            fields:
+              - name: street
+                label: Street
+                type: string
+              - name: street_number
+                label: Street number
+                type: string
+              - name: postcode
+                label: Postcode
+                type: string
+              - name: city
+                label: City
+                type: string
