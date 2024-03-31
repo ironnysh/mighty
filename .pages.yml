@@ -5,7 +5,7 @@ content:
   - name: homepage
     label: Homepage
     path: src/index.njk
-    type: collection
+    type: file
     fields:
       - name: title
         label: Title
