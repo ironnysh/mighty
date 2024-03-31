@@ -2,10 +2,16 @@ media:
   input: src/assets
   output: /assets
 content:
+  - name: pages
+    label: Pages
+    path: src
+    type: collection
+    fields:
+      (...)
   - name: sections
     label: Sections
     type: file
-    path: 'src/_data/texts.json'
+    path: src/_data/texts.json
     view:
       fields: [ title, summary ]
     fields:
