@@ -3,16 +3,16 @@
 	"title": "Cutting Edge Bangs",
 	"description": "A boutique hair salon in Chicago. Specializing in bangs that go BANG!",
 	"author": "Curly Simon",
-	"url": "https://mighty-site.vercel.app",
+	"site_url": "https://mighty-site.vercel.app",
 	"socialImage": "/assets/social-image.jpg",
 	"contact": {
 		"twitter": "https://twitter.com/eleven_ty",
-		"phoneCall": "+12(0)34567890",
-		"phoneNumber": "+12 (0)34 567890",
+		"phone_call": "+12(0)34567890",
+		"phone_number": "+12 (0)34 567890",
 		"email": "ronnyshani@gmail.com",
 		"address": {
 			"street": "Main St.",
-			"streetNumber": "42",
+			"street_number": "42",
 			"postcode": "90210",
 			"city": "Chicago"
 		}
@@ -20,11 +20,11 @@
 	"navigation": [
 		{
 			"label": "services",
-			"url": "../#Services"
+			"url_one": "../#Services"
 		},
 		{
 			"label": "portfolio",
-			"url": "../#Portfolio"
+			"url_two": "../#Portfolio"
 		}
 	]
 }
