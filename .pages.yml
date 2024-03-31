@@ -22,8 +22,6 @@ content:
     label: Sections
     type: file
     path: src/_data/texts.json
-    view:
-      fields: [ title, summary ]
     fields:
       - name: about
         label: About
