@@ -21,10 +21,10 @@ content:
         type: object
         fields:
           - { name: title, label: Title, type: string}
-          - { name: paragraph1, label: First paragraph, type: text, options: { maxlenght: 140 } }
+          - { name: paragraph_one, label: First paragraph, type: text, options: { maxlenght: 140 } }
+          - { name: paragraph_two, label: Second paragraph, type: text, options: { maxlenght: 140 } }
           - { name: urlToReadme, label: README URL, type: string}
           - { name: linkToReadme, label: README link text, type: string}
-          - { name: paragraph2, label: Second paragraph, type: text, options: { maxlenght: 140 } }
       - name: services
         label: Services
         type: object
