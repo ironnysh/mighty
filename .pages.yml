@@ -92,19 +92,15 @@ content:
         label: Navigation
         type: object
         fields:
-          - name: links
-            label: Links
-            type: object
-            fields:
-              - name: label
-                label: Link name
-                type: string
-              - name: url
-                label: URL
-                type: string
-              - name: label
-                label: Link name
-                type: string
-              - name: url
-                label: URL
-                type: string
+          - name: label
+            label: Link name
+            type: string
+          - name: url
+            label: URL
+            type: string
+          - name: label
+            label: Link name
+            type: string
+          - name: url
+            label: URL
+            type: string
