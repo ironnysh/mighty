@@ -7,7 +7,14 @@ content:
     path: src
     type: collection
     fields:
-      (...)
+      - name: title
+        label: Title
+        type: string
+      - name: layout
+        label: Layout
+        type: string
+        hidden: true
+        default: default
   - name: sections
     label: Sections
     type: file
