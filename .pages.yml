@@ -98,18 +98,10 @@ content:
             label: Address
             type: object
             fields:
-              - name: street
-                label: Street
-                type: string
-              - name: street_number
-                label: Street number
-                type: string
-              - name: postcode
-                label: Postcode
-                type: string
-              - name: city
-                label: City
-                type: string
+              - { name: street, label: Street, type: string }
+              - { name: street_number, label: Street number, type: string }
+              - { name: postcode, label: Postcode, type: string }
+              - { name: city, label: City, type: string }
       - name: navigation
         label: Navigation
         type: object
