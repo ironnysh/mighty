@@ -67,3 +67,5 @@ content:
             fields:
             - { name: url, label: URL, type: string }
             - { name: label, label: Link name, type: string }
+            - { name: url, label: URL, type: string }
+            - { name: label, label: Link name, type: string }
