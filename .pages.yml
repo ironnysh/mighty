@@ -15,6 +15,9 @@ content:
         type: string
         hidden: true
         default: default
+      - name: body
+        label: Body
+        type: rich-text
   - name: sections
     label: Sections
     type: file
