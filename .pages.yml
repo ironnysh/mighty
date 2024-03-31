@@ -2,9 +2,9 @@ media:
   input: src/assets
   output: /assets
 content:
-  - name: pages
-    label: Pages
-    path: src
+  - name: homepage
+    label: Homepage
+    path: src/index.njk
     type: collection
     fields:
       - name: title
