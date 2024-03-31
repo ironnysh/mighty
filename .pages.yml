@@ -38,7 +38,7 @@ content:
       - { name: title, label: Website title, type: string }
       - { name: description, label: Website description, type: string, description: Will be provided for any page with no description. }
       - { name: site_url, label: Website URL, type: string, pattern: "^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$" }
-      - { name: socialImage, label: Social image, type: image, description: Image used in the social preview on social networks (e.g. Facebook, Twitter...) }
+      - { name: socialImage, label: Social image, type: image, description: Image displayed on social media }
       - name: contact
         label: Contact information
         type: object
