@@ -7,17 +7,9 @@ content:
     path: src/imprint.md
     type: file
     fields:
-      - name: title
-        label: Title
-        type: string
-      - name: layout
-        label: Layout
-        type: string
-        hidden: true
-        default: default
-      - name: body
-        label: Body
-        type: rich-text
+      - { name: title, label: Title, type: string }
+      - { name: layout, label: Layout, type: string, hidden: true, default: default }
+      - { name: body, label: Body, type: rich-text }
   - name: sections
     label: Sections
     type: file
@@ -27,73 +19,34 @@ content:
         label: About
         type: object
         fields:
-          - name: title
-            label: Title
-            type: string
-          - name: paragraph1
-            label: First paragraph
-            type: text
-            options:
-              maxlenght: 140
-          - name: urlToReadme
-            label: README URL
-            type: string
-          - name: linkToReadme
-            label: README link text
-            type: string
-          - name: paragraph2
-            label: Second paragraph
-            type: text
-            options:
-              maxlenght: 140
+          - { name: title, label: Title, type: string}
+          - { name: paragraph1, label: First paragraph, type: text, options: maxlenght: 140}
+          - { name: urlToReadme, label: README URL, type: string}
+          - { name: linkToReadme, label: README link text, type: string}
+          - { name: paragraph2, label: Second paragraph, type: text, options: maxlenght: 140}
       - name: services
         label: Services
         type: object
         fields:
-          - name: title
-            label: Title
-            type: string
-          - name: summary
-            label: Summary
-            type: text
-            options:
-              maxlenght: 140
+          - { name: title, label: Title, type: string }
+          - { name: summary, label: Summary, type: text, options: maxlenght: 140 }
   - name: site
     label: Site settings
     path: src/_data/settings.json
     type: file
     fields:
-      - name: title
-        label: Website title
-        type: string
-      - name: description
-        label: Website description
-        type: string
-        description: Will be provided for any page with no description.
-      - name: site_url
-        label: Website URL
-        type: string
-        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
-      - name: socialImage
-        label: Social image
-        type: image
-        description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
+      - { name: title, label: Website title, type: string }
+      - { name: description, label: Website description, type: string, description: Will be provided for any page with no description. }
+      - { name: site_url, label: Website URL, type: string, pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$ }
+      - { name: socialImage, label: Social image, type: image, description: Image used in the social preview on social networks (e.g. Facebook, Twitter...) }
       - name: contact
         label: Contact information
         type: object
         fields:
-          - name: twitter
-            label: Twitter
-            type: string
-          - name: phone_call
-            label: Phone call
-            type: string
-          - name: phone_number
-            label: Phone number
-            type: string
-          - name: email
-            label: Email
-            type: string
+          - { name: twitter, label: Twitter, type: string }
+          - { name: phone_call, label: Phone call, type: string }
+          - { name: phone_number, label: Phone number, type: string }
+          - { name: email, label: Email, type: string }
           - name: address
             label: Address
             type: object
@@ -106,15 +59,7 @@ content:
         label: Navigation
         type: object
         fields:
-          - name: label
-            label: Link name
-            type: string
-          - name: url
-            label: URL
-            type: string
-          - name: label
-            label: Link name
-            type: string
-          - name: url
-            label: URL
-            type: string
+          - { name: label, label: Link name, type: string }
+          - { name: url, label: URL, type: string }
+          - { name: label, label: Link name, type: string }
+          - { name: url, label: URL, type: string }
