@@ -60,9 +60,6 @@ content:
             type: text
             options:
               maxlenght: 140
-          - name: body
-            label: Body
-            type: rich-text
   - name: site
     label: Site settings
     path: src/_data/settings.json
