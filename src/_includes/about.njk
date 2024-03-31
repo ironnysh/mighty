@@ -1,7 +1,5 @@
 <article class="about">
-  {%- for about in texts.about %}
-    <h2 id="About_me">{{ about.title }}</h2>
-      <p>{{ about.paragraph_one }} {% if about.urlToReadme and about.linkToReadme | length %}<a href="{{ about.urlToReadme }}">{{ about.linkToReadme }}</a>{% endif %}</p>
-      <p>{{ about.paragraph_two }}</p>
-  {% endfor %}
+    <h2 id="About_me">{{ texts.about.title }}</h2>
+      <p>{{ texts.about.paragraph_one }} {% if texts.about.urlToReadme and texts.about.linkToReadme | length %}<a href="{{ texts.about.urlToReadme }}">{{ texts.about.linkToReadme }}</a>{% endif %}</p>
+      <p>{{ texts.about.paragraph_two }}</p>
 </article>
