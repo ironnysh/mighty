@@ -37,7 +37,7 @@ content:
     fields:
       - { name: title, label: Website title, type: string }
       - { name: description, label: Website description, type: string, description: Will be provided for any page with no description. }
-      - { name: site_url, label: Website URL, type: string, pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$ }
+      - { name: site_url, label: Website URL, type: string, pattern: "^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$" }
       - { name: socialImage, label: Social image, type: image, description: Image used in the social preview on social networks (e.g. Facebook, Twitter...) }
       - name: contact
         label: Contact information
@@ -52,8 +52,8 @@ content:
             type: object
             fields:
               - { name: street, label: Street, type: string }
-              - { name: street_number, label: Street number, type: string }
-              - { name: postcode, label: Postcode, type: string }
+              - { name: street_number, label: Street number, type: number }
+              - { name: postcode, label: Postcode, type: number, options: { min: 5, max: 7 } }
               - { name: city, label: City, type: string }
       - name: navigation
         label: Navigation
