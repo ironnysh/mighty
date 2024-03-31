@@ -48,7 +48,7 @@ content:
         label: Website description
         type: string
         description: Will be provided for any page with no description.
-      - name: url
+      - name: site_url
         label: Website URL
         type: string
         pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
