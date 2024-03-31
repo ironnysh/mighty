@@ -18,6 +18,22 @@ content:
       - name: body
         label: Body
         type: rich-text
+        - name: contact
+        label: Contact information
+        type: object
+        fields:
+          - name: twitter
+            name: Twitter
+            type: string
+          - name: phoneCall
+            name: Phone call
+            type: string
+          - name: phoneNumber
+            name: Phone number
+            type: string
+          - name: email
+            name: Email
+            type: string
   - name: sections
     label: Sections
     type: file
