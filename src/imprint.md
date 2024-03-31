@@ -12,7 +12,7 @@ title: Site Notice & Privacy Policy
 
 {{ settings.author }}
 
-{{ settings.contact.address.streetNumber }} {{ settings.contact.address.street }},
+{{ settings.contact.address.street_number }} {{ settings.contact.address.street }},
 {{ settings.contact.address.postcode }} {{ settings.contact.address.city }}
 </address>
 {% endif %}

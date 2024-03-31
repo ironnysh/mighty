@@ -20,11 +20,11 @@
 	"navigation": [
 		{
 			"label": "services",
-			"url_one": "../#Services"
+			"url": "../#Services"
 		},
 		{
 			"label": "portfolio",
-			"url_two": "../#Portfolio"
+			"url": "../#Portfolio"
 		}
 	]
 }
