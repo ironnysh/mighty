@@ -3,7 +3,7 @@ media:
   output: /assets
 content:
   - name: homepage
-    label: Homepage
+    label: Imprint
     path: src/imprint.md
     type: file
     fields:
