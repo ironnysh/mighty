@@ -20,7 +20,7 @@
 	],
 	"author": "Ronny Shani (https://ronnyshani.com)",
 	"devDependencies": {
-		"@11ty/eleventy": "3.0.0-alpha.16",
+		"@11ty/eleventy": "3.0.0-alpha.17",
 		"html-minifier": "^4.0.0"
 	},
 	"type": "module"
