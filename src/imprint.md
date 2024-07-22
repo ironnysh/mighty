@@ -2,6 +2,8 @@
 title: Site Notice & Privacy Policy
 layout: default
 ---
+<article class="imprint">
+
 ## Masthead
 
 {% if settings.title and settings.contact.address | length %}
@@ -32,14 +34,15 @@ This website uses third-party services, such as GitHub and Vercel. While they ha
 
 GitHub is where we host the code and other assets related to this site ([read GitHub’s privacy policy](https://help.github.com/articles/github-privacy-statement/)), and Vercel is where we host the rendered website you're browsing ([read Vercel’s GDPR policy](https://vercel.com/legal/privacy-policy)).
 
-*   {% for privacy in texts.privacy %}
-    
-*   {{ privacy.title }}
-    
-    {{ privacy.summary }}
-    
-*   {% endfor %}
-    
+<ul class="columns">
+{% for privacy in texts.privacy %}
+<li>
+
+### {{ privacy.title }}
+{{ privacy.summary }}
+</li>
+{% endfor %}
+</ul>
 
 ### Colophon
 
@@ -53,3 +56,4 @@ GitHub is where we host the code and other assets related to this site ([read Gi
     
 
 Last update: {{ helpers.lastUpdate() }}
+</article>
