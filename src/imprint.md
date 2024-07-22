@@ -12,7 +12,7 @@ layout: default
 
 {{ settings.author }}
 
-{{ settings.contact.address.street\_number }} {{ settings.contact.address.street }}, {{ settings.contact.address.postcode }} {{ settings.contact.address.city }}
+{{ settings.contact.address.street_number }} {{ settings.contact.address.street }}, {{ settings.contact.address.postcode }} {{ settings.contact.address.city }}
 
 {% endif %}
 
