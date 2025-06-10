@@ -56,9 +56,7 @@ body {
 	background-color: var(--bg-color);
 }
 
-h1,
-h2,
-h3 {
+:is(h1, h2, h3) {
 	font-family: ui-serif, serif;
 	color: var(--dark-accent);
 	font-weight: 400;
@@ -89,19 +87,19 @@ header {
 	grid-template-rows: min-content min-content 1fr;
 	height: 60vh;
 	position: fixed;
-}
 
-header :is(h1 > a, nav) {
-	margin-inline-start: var(--xl-spacer);
-}
+	& :is(h1 > a, nav) {
+		margin-inline-start: var(--xl-spacer);
+	}
 
-header :is(a, a:visited) {
-	text-decoration: none;
-	color: var(--text-color);
-}
+	& :is(a, a:visited) {
+		text-decoration: none;
+		color: var(--text-color);
+	}
 
-header a:hover {
-	text-decoration: revert;
+	& a:hover {
+		text-decoration: revert;
+	}
 }
 
 h1 {
@@ -124,7 +122,6 @@ nav[aria-label="Primary"] {
 
 header img {
 	object-fit: cover;
-	/* object-fit: contain; */
 	object-position: bottom center;
 	height: var(--full-width);
 	width: 100vw;
@@ -173,15 +170,15 @@ address {
 	place-content: center;
 	place-items: center;
 	gap: var(--md-spacer);
+
+	& p::first-line {
+		font-weight: 600;
+	}
 }
 
 :is(.about, .clip) p {
 	text-align: justify;
 	padding-inline-end: var(--md-spacer);
-}
-
-.about p::first-line {
-	font-weight: 600;
 }
 
 ul:is([class]) {
@@ -196,9 +193,9 @@ ul:is([class]) {
 	gap: var(--xl-spacer);
 
 	&h3 {
-			border-block-end: 1px solid var(--dark-accent);}
+		border-block-end: 1px solid var(--dark-accent);
+	}
 }
-
 
 .contact {
 	display: grid;
@@ -223,23 +220,23 @@ svg {
 
 nav[aria-label="Secondary"] {
 	gap: var(--sm-spacer);
-}
 
-nav[aria-label="Secondary"] a {
-	display: grid;
-	place-content: center;
-	color: var(--bg-color);
-	background-color: var(--dark-accent);
-	height: calc(var(--md-spacer) * 2);
-	width: calc(var(--md-spacer) * 2);
-	padding: 0.1em;
-	border-radius: 50%;
-	border-bottom-left-radius: 0;
-	transition: color 0.5s ease-in 0.2s;
-}
+	& a {
+		display: grid;
+		place-content: center;
+		color: var(--bg-color);
+		background-color: var(--dark-accent);
+		height: calc(var(--md-spacer) * 2);
+		width: calc(var(--md-spacer) * 2);
+		padding: 0.1em;
+		border-radius: 50%;
+		border-bottom-left-radius: 0;
+		transition: color 0.5s ease-in 0.2s;
 
-nav[aria-label="Secondary"] a:is(:hover, :focus-visible) {
-	color: var(--light-accent);
+		&:is(:hover, :focus-visible) {
+			color: var(--light-accent);
+		}
+	}
 }
 
 img {
@@ -276,14 +273,14 @@ img {
 	display: grid;
 	grid-template-rows: max-content min-content 1fr;
 	gap: var(--sm-spacer);
-}
 
-.clip:first-of-type {
-	padding-inline-start: var(--sm-spacer);
-}
+	& :first-of-type {
+		padding-inline-start: var(--sm-spacer);
+	}
 
-.clip:last-of-type {
-	padding-inline-end: var(--sm-spacer);
+	& :last-of-type {
+		padding-inline-end: var(--sm-spacer);
+	}
 }
 
 .player {
@@ -292,6 +289,19 @@ img {
 	border: none;
 	background: inherit;
 	padding: 0;
+
+	img {
+			filter: opacity(0.9) sepia(0.7);
+			height: 260px;
+			object-fit: none;
+			border-radius: var(--md-spacer);
+			cursor: pointer;
+			background-color: currentColor;
+			transition: all 1s ease-in-out;
+	
+			&:hover {
+				filter: opacity(1) sepia(0);
+			}}
 }
 
 .player > * {
@@ -309,20 +319,6 @@ img {
 	padding: var(--sm-spacer) var(--xl-spacer);
 	z-index: 2;
 	grid-area: 1/-1;
-}
-
-.player img {
-	filter: opacity(0.9) sepia(0.7);
-	height: 260px;
-	object-fit: none;
-	border-radius: var(--md-spacer);
-	cursor: pointer;
-	background-color: currentColor;
-	transition: all 1s ease-in-out;
-}
-
-.player img:hover {
-	filter: opacity(1) sepia(0);
 }
 
 iframe {
