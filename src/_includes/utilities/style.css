@@ -2,7 +2,7 @@
 	/* Colors */
 
 	--text-color: hsl(0 0% 20%);
-	--bg-color: hsl(0 0% 90%);
+	--bg-color: hsl(52.5, 16%, 90.2%);
 	--white-color: hsl(0 0% 100%);
 	--playbtn-color: hsl(0 100% 50%);
 	--light-accent: hsl(35 100% 60%);
@@ -27,12 +27,6 @@
 }
 
 @font-face {
-	font-family: "Patua One";
-	font-display: swap;
-	src: url("/assets/patua-one.woff2") format("woff2");
-}
-
-@font-face {
 	font-family: "Fredericka the Great";
 	font-display: swap;
 	src: url("/assets/fredericka-the-great-subset.woff2") format("woff2");
@@ -54,8 +48,7 @@ html {
 
 body {
 	font-family: "Catamaran", system-ui, sans-serif;
-	font-style: normal;
-	line-height: 1.6;
+	line-height: 1.5;
 	min-height: -webkit-fill-available;
 	min-height: 100vh;
 	margin: var(--center);
@@ -66,7 +59,7 @@ body {
 h1,
 h2,
 h3 {
-	font-family: "Patua One", system-ui, serif;
+	font-family: ui-serif, serif;
 	color: var(--dark-accent);
 	font-weight: 400;
 }
@@ -87,14 +80,14 @@ h2[id="About_me"] {
 	color: var(--dark-accent);
 }
 
-:where(a:focus) {
+:where(a:focus-visible) {
 	outline: 1px solid currentColor;
 }
 
 header {
 	display: grid;
 	grid-template-rows: min-content min-content 1fr;
-	height: 80vh;
+	height: 60vh;
 	position: fixed;
 }
 
@@ -114,7 +107,6 @@ header a:hover {
 h1 {
 	color: var(--light-accent);
 	font-size: clamp(var(--xl-spacer), var(--md-spacer) + 2vw, 2.5rem);
-	letter-spacing: 0.05em;
 	margin-block-end: var(--sm-spacer);
 	grid-area: 1/1;
 }
@@ -132,7 +124,8 @@ nav[aria-label="Primary"] {
 
 header img {
 	object-fit: cover;
-	object-position: top;
+	/* object-fit: contain; */
+	object-position: bottom center;
 	height: var(--full-width);
 	width: 100vw;
 	z-index: -1;
@@ -141,14 +134,14 @@ header img {
 
 .wrapper {
 	position: relative;
-	top: 80vh;
+	top: 60vh;
 	background-color: inherit;
 	padding-block-start: var(--xl-spacer);
 	border-block-start: var(--sm-spacer) solid var(--light-accent);
 }
 
 main {
-	width: clamp(90vw, 80vw, 60vw);
+	width: clamp(30vw, 70rem, 90vw);
 	margin: var(--center);
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
@@ -192,20 +185,20 @@ address {
 }
 
 ul:is([class]) {
-	list-style: none;
+	list-style: "";
 	margin: 0;
 	padding: 0;
 }
 
 .columns {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(min(265px, 100%), 1fr));
 	gap: var(--xl-spacer);
+
+	&h3 {
+			border-block-end: 1px solid var(--dark-accent);}
 }
 
-.columns h3 {
-	border-block-end: 1px solid var(--dark-accent);
-}
 
 .contact {
 	display: grid;
@@ -245,7 +238,7 @@ nav[aria-label="Secondary"] a {
 	transition: color 0.5s ease-in 0.2s;
 }
 
-nav[aria-label="Secondary"] a:is(:hover, :focus) {
+nav[aria-label="Secondary"] a:is(:hover, :focus-visible) {
 	color: var(--light-accent);
 }
 

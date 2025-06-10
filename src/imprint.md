@@ -52,7 +52,7 @@ GitHub is where we host the code and other assets related to this site ([read Gi
     
 *   Hero photo by [Adam Winger](https://unsplash.com/@awcreativeut) on Unsplash.
     
-*   Fonts: Catamaran (body text), Patua One (headings), Fredericka the Great (tagline). Source: [Google Fonts](https://fonts.google.com); served locally.
+*   Fonts: Catamaran (body text), system serif (headings), Fredericka the Great (tagline). Source: [Google Fonts](https://fonts.google.com); served locally.
     
 
 Last update: {{ helpers.lastUpdate() }}
