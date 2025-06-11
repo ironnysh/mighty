@@ -26,7 +26,7 @@ export default function (eleventyConfig) {
 				removeComments: true,
 				removeEmptyAttributes: true,
 				removeRedundantAttributes: true,
-				minifyCSS: true,
+				// minifyCSS: true,
 				minifyJS: true,
 				processScripts: "application/ld+json",
 			});
