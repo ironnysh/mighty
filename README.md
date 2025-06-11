@@ -17,8 +17,8 @@
 - Minified code.
 - Maximized performance.
 - Semantic and accessible markup.
-- Supports RTL layout.
-- Built in cache and security configuration.
+- RTL support.
+- Built in caching and security configuration.
 
 ### Table of Contents
 
@@ -60,12 +60,12 @@ npm install
 
 ### 2. Run Eleventy
 #### Locally (development)
-Copy the snippet below and paste it into your device's terminal to generate a local copy of the site in the `www` directory. The files automatically update whenever you make changes:
+Copy the snippet below and paste it into your device's terminal to generate a local copy of the site in the `www` directory. The files update whenever you make changes:
 
 ```
 npm start
 ```
-Open your browser and type `http://localhost:8080` in the address bar to see your site.
+Open your browser and type `http://localhost:8080` in the address bar to visit your site.
 
 #### Hosting (production)
 When you're ready to deploy your site to a hosting provider, copy and paste the snippet below into your preferred hosting platform's settings section.
@@ -75,7 +75,7 @@ It will generate a remote copy of the site in the `www` directory (*note: If you
 ```
 npm run build
 ```
-[Vercel](https://vercel.com) is my preferred hosting provider, but you can use any other service that supports static sites, including [Netlify](https://www.netlify.com), [Render](https://render.com), and [Cloudflare Pages](https://pages.cloudflare.com).
+[Vercel](https://vercel.com) is my preferred hosting provider, but you can use any other service that supports static sites, including [Netlify](https://www.netlify.com), [Render](https://render.com), or [Cloudflare Pages](https://pages.cloudflare.com).
 
 Click the button to host your site on Vercel:
 
@@ -87,19 +87,19 @@ This is what you should see after clicking the button. Note the override of the 
 ## Customize and edit the content, color schemes, and fonts
 
 ### Edit the content
-There are three files to edit (see the [File overview](#file-overview) below for details):
-1. `src/_data/settings.json` - change the values to the right of the colon of each key. E.g., `url` should be your site's address, `author` should be your name, `phone_number` should be your number (change `phone_call` accordingly, keeping the format to allow tap-to-call on mobile), etc. This is also where you can change the labels of the top navigation. E.g., `products` and `work` instead of `services` and `portfolio`.
+There are three files to edit (refer to the [File overview](#file-overview) below for details):
+1. `src/_data/settings.json` - change the values to the right of the colon of each key. For example, `url` should be your site's address, `author` should be your name, and `phone_number` should be your number (change `phone_call` accordingly, keeping the format to allow tap-to-call on mobile). This is also where you can change the labels of the top navigation. For example, `products` and `work` instead of `services` and `portfolio`.
 2. `src/_data/texts.json` - text displayed on the homepage: title and paragraphs of the **About** section; titles and summaries of the **Services** section; titles, summaries, and video IDs for the *Portfolio*; and privacy policy references. You can change the values to the right of the colon of the `title`, `summary`, and `videoID` keys. Unless you plan to add an analytics service, you can leave the privacy section as-is.
-#. `src/imprint.md` - your personal details and contact information (Masthead) are generated automatically based on the details provided in the `_data/settings.json`. Unless you plan to add analytics or other tracking services, you can leave the _Data Protection_ and _GDPR_ sections as-is. The other privacy references on the page are generated automatically based on the information provided in the privacy section of the `_data/texts.json`. You can update the relevant credits under the _Colophon_ according to your sources and service providers.
+#. `src/imprint.md` - your personal details and contact information (masthead) are generated automatically based on the details provided in the `_data/settings.json`. Unless you plan to add analytics or other tracking services, you can leave the _Data Protection_ and _GDPR_ sections as-is. The other privacy references on the page are generated automatically based on the information provided in the privacy section of the `_data/texts.json`. You can update the relevant credits under the _Colophon_ according to your sources and service providers.
 
-*Note: you can delete this `README` file, as well `subset-google_fonts.webp`, `delpoy-to-vercel.webp`, and `mighty-demo-screenshot.webp`. These files are here to help you set up the site.
+*Note: you can delete this `README` file, as well as `subset-google_fonts.webp`, `deploy-to-vercel.webp`, and `mighty-demo-screenshot.webp`. These files are here to help you set up the site.
 
 ### Change colors and fonts
 Open `src/_includes/utilities/style.css` and edit any CSS attribute you'd like.
 
 The most relevant parts are probably the colors and fonts:
 1. All the colors are defined as CSS variables on the top. Change the `hsl` values to the color scheme you want.
-2. We use three fonts (see the [File overview](#file-overview) below). If you delete or replace any of them, update the references in two places: the `@font-face` rules at the top of the CSS file and the `font-family` variable. There are fallback system fonts for each.
+2. I use three fonts (refer to the [File overview](#file-overview) below). If you delete or replace any of them, update the references in two places: the `@font-face` rules at the top of the CSS file and the `font-family` variable. There are fallback system fonts for each.
 **Important**: for better performance, the fonts are preloaded in the `head` of the main layout (`src/_includes/layouts/default.njk`)—delete or update these lines according to the fonts you use.
 
 ### Contact icons
@@ -118,18 +118,18 @@ The `src/assets` folder includes all the non-code files: fonts, images, and favi
 **Optimize Fonts**: _Fredericka the great_ is a large font file, even when limited to the Latin alphabet. You can optimize it further by downloading a "leaner" version of it from Google Fonts. Follow these steps:
 1. Copy the line below:
 ```
-https://fonts.googleapis.com/css?family=Fredericka+the+Great&text=YOUR-LETTERS-HERE
+https://fonts.googleapis.com/css?family=Fredericka+the+Great&text=YOUR_LETTERS_HERE
 ```
-2. Replace the `YOUR-LETTERS-HERE` after the `text=` part with the letters you need for the heading (right now, it's "Every Story is Interesting if you Know How to Tell it") making sure you don't repeat any letter. I.e., `EveryStoisIngfuKwHTl` for the sentence above.
+2. Replace the `YOUR_LETTERS_HERE` after the `text=` part with the letters you need for the heading (right now, it's "Every Story is Interesting if you Know How to Tell it") making sure you don't repeat any letter. It's `EveryStoisIngfuKwHTl` for the sentence above.
 3. Paste the whole URL into your browser address bar (the Google Fonts link and your letters) and hit `Enter`.
 4. You'll see a plain HTML page with a few lines of code. Copy the part inside the parentheses after `src: url`. See the yellowed line in the screenshot:
 
 ![screenshot: CSS code of a subsetted font from Google Fonts](subset-google_fonts.webp)
 
-5. Paste this URL you copied into your browser address bar, hit `Enter`, and save the optimized font file to your device.
+5. Paste the new URL you copied into your browser address bar, hit `Enter`, and save the optimized font file to your device.
 6. Rename the downloaded file to `fredericka-the-great-subset`, copy it, and paste it into your site's `src/assets` folder to replace the current file.
 
-This might seem daunting or a waste of time, but it's less complicated than it seems, and is definitely worth it. For example , the `EveryStoisIngfuKwHTl` subset version of the font is **36 kb** instead of **110 kb**! Major performance gains for you and your site's visitors.
+This might seem daunting or pointless, but it's less complicated than it seems, and is definitely worth it. For example, the `EveryStoisIngfuKwHTl` subset version of the font is **36 kb** instead of **110 kb**! Major performance gains for you and your site's visitors.
 
 ## Epilogue
 I started working on the first version of this project around April 2020, when Covid-19 came to town, and the world suddenly stopped. I had just discovered a thing called Eleventy, "a simpler static site generator." (The developer, [Zach Leatherman](https://twitter.com/zachleat), wasn't lying.)
@@ -177,9 +177,8 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 │       └── catamaran.woff2
 │       └── favicon.svg
 │       └── fredericka-the-great-subset.woff2
-│       └── patua-one.woff2
 │       └── social-image.jpg
-│       └── hero-image.webp
+│       └── hero-image-dithered.webp
 │   └── imprint.md
 │   └── index.njk
 │   └── robots.njk
@@ -192,8 +191,8 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 ├── LICENSE
 ├── README.md
 ├── Subset-google_fonts.webp
-├── mighty.webp
-├── vercel_delpoy.webp
+├── mighty-demo-screenshot.webp
+├── deploy-to-vercel.webp
 └── package.json
 └── vercel.json
 
@@ -207,19 +206,19 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 - `README.md` - the document you're currently reading.
 - `LICENSE` - the open-source license.
 - `Subset-google_fonts.webp` - a screenshot of a CSS code for a subsetted font from Google Fonts.
-- `vercel_delpoy.webp` -  a screenshot of Vercel's deployment settings window.
-- `mighty.webp` -  a screenshot of the demo site. 
+- `vercel_delpoy.webp` - a screenshot of Vercel's deployment settings window.
+- `mighty.webp` - a screenshot of the demo site. 
 - `package.json` - general information about the repository, scripts, and dependencies.
 
 `.github`:
 - `dependabot.yml` - GitHub's automatic updates of dependencies.
 
 `.github/workflows`:
-- `calibreapp-image-actions.yml` - Calibreapp's GitHub Action compresses and optimizes images. It's triggered on pull-requests, when a JPG/WebP file changes. [See information and optional configuration](https://github.com/marketplace/actions/image-actions).
+- `calibreapp-image-actions.yml` - Calibreapp's GitHub Action compresses and optimizes images. It's triggered on pull-requests, when a JPG/WebP file changes. [For information and optional configuration](https://github.com/marketplace/actions/image-actions).
 
 `src`:
-- `imprint.md` - text for the Imprint & privacy policy page.
-- `index.njk` - 11ty template for generating the homepage: loads the About, Services, and Portfolio sections.
+- `imprint.md` - text for the imprint & privacy policy page.
+- `index.njk` - 11ty template for generating the homepage: loads the about, services, and portfolio sections.
 - `robots.njk` - 11ty template for generating a generic `robots.txt` file for search engines, web crawlers, and bots.
 
 `src/_data`:
@@ -231,7 +230,7 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 - `layouts` > `default.njk` - default site layout, responsible for loading the style and script.
 - `svg` > `email.svg`, `phone.svg`, `twitter.svg` - the SVG icons displayed in the Contact section.
 
-- `about.njk` - the layout for the About section (right below the hero image).
+- `about.njk` - the layout for the about section (right below the hero image).
 - `contact.njk` - the layout for the contact section (the yellow _Let's Talk_ circle).
 - `footer.njk` - the layout for the footer. Includes copyright, date, and link to imprint.
 - `header.njk` - title, navigation, and hero image.
@@ -241,12 +240,11 @@ You're welcome to contribute to this project. Feel free to open an issue if you 
 `src/_includes/utilities`:
 - `schema.njk` - script for SEO and search engines.
 - `style.css` - CSS styles.
-- `liteYoutube.js` - script that loads the YouTube video (iframe embeds) only when the user clicks the placeholder photo.
+- `liteYoutube.js` - script that loads the YouTube video (`iframe` embeds) only when the user clicks the placeholder photo.
  
 `src/assets`:
 - `favicon.svg` - site favicon.
 - `social-image.jpg` - graphic file for social media shares.
-- `hero-image.webp` - hero image.
+- `hero-image-dithered.webp` - hero image.
 - `catamaran.woff2` - font file for the body text across the site.
 - `fredericka-the-great.woff2` - font file for the tagline. Note: this file is a minimal subset version. See the description above.
-- `patua-one.woff2` - font file for the headings on the site.
