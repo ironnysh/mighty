@@ -2,7 +2,7 @@
 	/* Colors */
 
 	--text-color: hsl(0 0% 20%);
-	--bg-color: hsl(52.5, 16%, 90.2%);
+	--bg-color: hsl(52.5, 15%, 90%);
 	--white-color: hsl(0 0% 100%);
 	--playbtn-color: hsl(0 100% 50%);
 	--light-accent: hsl(35 100% 60%);
@@ -58,28 +58,21 @@ body {
 
 :is(h1, h2, h3) {
 	font-family: ui-serif, serif;
-	color: var(--dark-accent);
 	font-weight: 400;
-}
-
-h2[id="About_me"] {
-	font-family: "Fredericka the Great", system-ui, serif;
-	line-height: 1.3;
-	margin: 0;
-	text-align: center;
-}
-
-:where(a) {
-	color: currentColor;
-}
-
-:where(a:hover) {
-	text-decoration: none;
 	color: var(--dark-accent);
+	text-wrap: balance;
 }
 
-:where(a:focus-visible) {
-	outline: 1px solid currentColor;
+a {
+	color: currentColor;
+
+	&:hover {
+			text-decoration: none;
+		}
+
+	&:focus-visible {
+		outline: 1px solid currentColor;
+	}
 }
 
 header {
@@ -103,7 +96,6 @@ header {
 }
 
 h1 {
-	color: var(--light-accent);
 	font-size: clamp(var(--xl-spacer), var(--md-spacer) + 2vw, 2.5rem);
 	margin-block-end: var(--sm-spacer);
 	grid-area: 1/1;
@@ -112,12 +104,11 @@ h1 {
 nav {
 	display: flex;
 	gap: var(--xl-spacer);
-}
 
-nav[aria-label="Primary"] {
-	font-size: 1.15rem;
-	background-color: var(--light-accent);
-	grid-area: 2/1;
+	&[aria-label="Primary"] {
+			font-size: 1.15rem;
+			background-color: var(--light-accent);
+			grid-area: 2/1;}
 }
 
 header img {
@@ -144,7 +135,6 @@ main {
 	scroll-snap-type: y mandatory;
 	-webkit-overflow-scrolling: touch;
 	scrollbar-width: none;
-	-ms-overflow-style: none;
 }
 
 ::-webkit-scrollbar {
@@ -168,8 +158,14 @@ address {
 	display: grid;
 	grid-template-columns: min(90%, 75ch);
 	place-content: center;
-	place-items: center;
 	gap: var(--md-spacer);
+
+	& h2 {
+		font-family: "Fredericka the Great", system-ui, serif;
+		line-height: 1.2;
+		margin: 0;
+		text-align: center;
+	}
 
 	& p::first-line {
 		font-weight: 600;
@@ -235,6 +231,7 @@ nav[aria-label="Secondary"] {
 
 		&:is(:hover, :focus-visible) {
 			color: var(--light-accent);
+			border: 1px solid;
 		}
 	}
 }
@@ -250,7 +247,6 @@ img {
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
 	scrollbar-width: none;
-	-ms-overflow-style: none;
 	background:
 		linear-gradient(90deg, currentColor 91%, currentColor 90%),
 		linear-gradient(90deg, currentColor 90%, currentColor 91%) 100% 0,
