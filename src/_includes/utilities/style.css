@@ -41,7 +41,7 @@
 
 html {
 	scroll-behavior: smooth;
-	height: -webkit-fill-available;
+	block-size: -webkit-fill-available;
 }
 
 /* Fonts #2 */
@@ -49,8 +49,8 @@ html {
 body {
 	font-family: "Catamaran", system-ui, sans-serif;
 	line-height: 1.5;
-	min-height: -webkit-fill-available;
-	min-height: 100vh;
+	min-block-size: -webkit-fill-available;
+	min-block-size: 100vh;
 	margin: var(--center);
 	color: var(--text-color);
 	background-color: var(--bg-color);
@@ -78,11 +78,11 @@ a {
 header {
 	display: grid;
 	grid-template-rows: min-content min-content 1fr;
-	height: 60vh;
+	block-size: 60vh;
 	position: fixed;
 
 	& :is(h1 > a, nav) {
-		margin-inline-start: var(--xl-spacer);
+		padding-inline-start: var(--xl-spacer);
 	}
 
 	& :is(a, a:visited) {
@@ -114,8 +114,8 @@ nav {
 header img {
 	object-fit: cover;
 	object-position: bottom center;
-	height: var(--full-width);
-	width: 100vw;
+	block-size: var(--full-width);
+	inline-size: 100vw;
 	z-index: -1;
 	grid-area: 1/1 / -1/-1;
 }
@@ -129,7 +129,7 @@ header img {
 }
 
 main {
-	width: clamp(30vw, 70rem, 90vw);
+	inline-size: clamp(30vw, 70rem, 90vw);
 	margin: var(--center);
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
@@ -198,8 +198,8 @@ ul:is([class]) {
 	place-content: center;
 	place-items: center;
 	gap: var(--sm-spacer);
-	height: 220px;
-	width: 220px;
+	block-size: 220px;
+	inline-size: 220px;
 	background-color: var(--light-accent);
 	border-radius: 50%;
 	border: 2px solid var(--white-color);
@@ -207,8 +207,8 @@ ul:is([class]) {
 }
 
 svg {
-	width: 1.5ch;
-	height: 4ex;
+	inline-size: 1.5ch;
+	block-size: 4ex;
 	fill: currentColor;
 	overflow: hidden;
 	vertical-align: middle;
@@ -222,8 +222,8 @@ nav[aria-label="Secondary"] {
 		place-content: center;
 		color: var(--bg-color);
 		background-color: var(--dark-accent);
-		height: calc(var(--md-spacer) * 2);
-		width: calc(var(--md-spacer) * 2);
+		block-size: calc(var(--md-spacer) * 2);
+		inline-size: calc(var(--md-spacer) * 2);
 		padding: 0.1em;
 		border-radius: 50%;
 		border-bottom-left-radius: 0;
@@ -237,7 +237,7 @@ nav[aria-label="Secondary"] {
 }
 
 img {
-	max-width: var(--full-width);
+	max-inline-size: var(--full-width);
 }
 
 .videos {
@@ -263,7 +263,7 @@ img {
 
 .clip {
 	flex: 0 0 auto;
-	width: min(345px, calc(70% + 100px));
+	inline-size: min(345px, calc(70% + 100px));
 	scroll-snap-align: start;
 	scroll-margin-inline-start: var(--sm-spacer);
 	display: grid;
@@ -288,7 +288,7 @@ img {
 
 	img {
 			filter: opacity(0.9) sepia(0.7);
-			height: 260px;
+			block-size: 260px;
 			object-fit: none;
 			border-radius: var(--md-spacer);
 			cursor: pointer;
@@ -318,8 +318,8 @@ img {
 }
 
 iframe {
-	width: 345px;
-	height: 260px;
+	inline-size: 345px;
+	block-size: 260px;
 	border: none;
 	border-radius: var(--md-spacer);
 }
@@ -334,6 +334,8 @@ small {
 	display: flex;
 	justify-content: center;
 	gap: var(--sm-spacer);
+	inline-size: clamp(30vw, 70rem, 90vw);
+	margin: var(--center);
 }
 
 .imprint > * + * {
@@ -345,5 +347,5 @@ small {
 }
 
 .imprint p {
-	width: min(90%, 70ch);
+	inline-size: min(90%, 70ch);
 }
