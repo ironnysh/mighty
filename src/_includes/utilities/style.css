@@ -1,12 +1,20 @@
 :root {
 	/* Colors */
+	--hue: 80;
+	/* --swatch1: oklch(99% .05 var(--hue)); */
+	--swatch2: oklch(5% .01 var(--hue));
+	--swatch3: oklch(80% .2 var(--hue));
+	--swatch4: oklch(99% .01 var(--hue));
+	--swatch5: oklch(99% .2 var(--hue));
+	--swatch6: oklch(40% 1 var(--hue));
+	--swatch7: oklch(40% .05 calc(var(--hue) * 3));
 
-	--text-color: hsl(0 0% 20%);
 	--bg-color: hsl(52.5, 15%, 90%);
-	--white-color: hsl(0 0% 100%);
-	--playbtn-color: hsl(0 100% 50%);
-	--light-accent: hsl(35 100% 60%);
-	--dark-accent: hsl(200 25% 30%);
+	--text-color: var(--swatch2);
+	--light-accent: var(--swatch3);
+	--white-color: var(--swatch4);
+	--playbtn-color: var(--swatch6);
+	--dark-accent: var(--swatch7);
 
 	--center: 0 auto;
 	--full-width: 100%;
@@ -39,6 +47,10 @@
 	box-sizing: border-box;
 }
 
+::selection {
+	background-color: var(--swatch5);
+}
+
 html {
 	scroll-behavior: smooth;
 	block-size: -webkit-fill-available;
@@ -67,8 +79,8 @@ a {
 	color: currentColor;
 
 	&:hover {
-			text-decoration: none;
-		}
+		text-decoration: none;
+	}
 
 	&:focus-visible {
 		outline: 1px solid currentColor;
@@ -108,9 +120,10 @@ nav {
 	gap: var(--xl-spacer);
 
 	&[aria-label="Primary"] {
-			font-size: 1.15rem;
-			background-color: var(--light-accent);
-			grid-area: 2/1;}
+		font-size: 1.15rem;
+		background-color: var(--light-accent);
+		grid-area: 2/1;
+	}
 }
 
 header img {
@@ -249,8 +262,7 @@ img {
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
 	scrollbar-width: none;
-	background:
-		linear-gradient(90deg, currentColor 91%, currentColor 90%),
+	background: linear-gradient(90deg, currentColor 91%, currentColor 90%),
 		linear-gradient(90deg, currentColor 90%, currentColor 91%) 100% 0,
 		radial-gradient(farthest-side at 0 50%, var(--gallery-bg-color-alpha), var(--gallery-bg-color-alpha-0)),
 		radial-gradient(farthest-side at 100% 50%, var(--gallery-bg-color-alpha), var(--gallery-bg-color-alpha-0)) 100% 0;
@@ -289,16 +301,17 @@ img {
 	padding: 0;
 
 	img {
-			filter: opacity(0.9) sepia(0.7);
-			block-size: 260px;
-			object-fit: none;
-			border-radius: var(--md-spacer);
-			cursor: pointer;
-			transition: all 1s ease-in-out;
-	
-			&:hover {
-				filter: opacity(1) sepia(0);
-			}}
+		filter: opacity(0.9) sepia(0.7);
+		block-size: 260px;
+		object-fit: none;
+		border-radius: var(--md-spacer);
+		cursor: pointer;
+		transition: all 1s ease-in-out;
+
+		&:hover {
+			filter: opacity(1) sepia(0);
+		}
+	}
 }
 
 .player > * {
