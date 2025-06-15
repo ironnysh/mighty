@@ -292,7 +292,6 @@ img {
 			object-fit: none;
 			border-radius: var(--md-spacer);
 			cursor: pointer;
-			background-color: currentColor;
 			transition: all 1s ease-in-out;
 	
 			&:hover {
@@ -318,7 +317,8 @@ img {
 }
 
 iframe {
-	inline-size: 345px;
+	max-inline-size: var(--full-width);
+	aspect-ratio: 3/2 auto;
 	block-size: 260px;
 	border: none;
 	border-radius: var(--md-spacer);
